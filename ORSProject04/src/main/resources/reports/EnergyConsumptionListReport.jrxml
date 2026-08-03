@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EnergyConsumptionListReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bd908295-6090-4edd-9fb3-05ae1fb24c89">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="myadapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id,energyCode,deviceName, unitsConsumed,status FROM p04.energy_consumption]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="energy_consumption"/>
+	</field>
+	<field name="energyCode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="energyCode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="energy_consumption"/>
+	</field>
+	<field name="deviceName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="deviceName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="energy_consumption"/>
+	</field>
+	<field name="unitsConsumed" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="unitsConsumed"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="energy_consumption"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="energy_consumption"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="energyCode">
+		<groupExpression><![CDATA[$F{energyCode}]]></groupExpression>
+	</group>
+	<group name="deviceName">
+		<groupExpression><![CDATA[$F{deviceName}]]></groupExpression>
+	</group>
+	<group name="unitsConsumed">
+		<groupExpression><![CDATA[$F{unitsConsumed}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="c3c9b802-15dd-4e9a-a462-28fd138eecaa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d834ca33-1473-4ec6-8d5f-5190874cbad9"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="48310324-609f-494a-a0eb-c5dc1ffac042">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad009943-17bf-4ab3-a9be-1780e2e33acc"/>
+				</reportElement>
+				<text><![CDATA[energyCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="34fe3997-f00c-4c8f-b7b1-042aa03bdeb0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fd482fe0-dcf5-4141-a80a-8a89994b77f6"/>
+				</reportElement>
+				<text><![CDATA[deviceName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="58f1a1df-4231-43a6-8da7-6af5273d4237">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="00492760-96da-4df4-9595-50975197742e"/>
+				</reportElement>
+				<text><![CDATA[unitsConsumed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="c1aa036d-ab5e-43a5-895f-12d6ca645bd6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9af714c5-ba1f-406e-b726-15e3aadfeca4"/>
+				</reportElement>
+				<text><![CDATA[status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="5ebe5823-947c-4d5a-9b4b-6372a74b2d19">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d834ca33-1473-4ec6-8d5f-5190874cbad9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="30" uuid="0ef886b0-e8c4-4534-88da-fe1421e891b7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad009943-17bf-4ab3-a9be-1780e2e33acc"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{energyCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="9fe239c7-ff2b-4d84-aeb3-c185cf79ba2a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fd482fe0-dcf5-4141-a80a-8a89994b77f6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{deviceName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="22e26b17-2a0d-4eb3-97be-a13de23df387">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="00492760-96da-4df4-9595-50975197742e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{unitsConsumed}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="7699fa78-abe0-406e-af7d-56da16b7b4d4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9af714c5-ba1f-406e-b726-15e3aadfeca4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

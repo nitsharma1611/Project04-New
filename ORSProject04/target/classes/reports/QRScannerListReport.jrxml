@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="QRScannerListReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="832b0d60-9c9f-4f95-86b3-8a94f16824ee">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="myadapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id, qrCode, scannedBy, scanTime, status FROM qr_scanner]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qr_scanner"/>
+	</field>
+	<field name="qrCode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="qrCode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qr_scanner"/>
+	</field>
+	<field name="scannedBy" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="scannedBy"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qr_scanner"/>
+	</field>
+	<field name="scanTime" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="scanTime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qr_scanner"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="qr_scanner"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="qrCode">
+		<groupExpression><![CDATA[$F{qrCode}]]></groupExpression>
+	</group>
+	<group name="scannedBy">
+		<groupExpression><![CDATA[$F{scannedBy}]]></groupExpression>
+	</group>
+	<group name="scanTime">
+		<groupExpression><![CDATA[$F{scanTime}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="363955f8-949d-4413-8a1c-9a8ef74275ea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d67ce25c-6995-4926-a237-4fd56125782d"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="cbc3b7b7-8720-4091-a45e-b5879b9a511c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89510cb0-8865-4b50-80db-37edac80dca4"/>
+				</reportElement>
+				<text><![CDATA[qrCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="e6b975e7-80c1-4601-957a-e5c3eb85a75b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0e492e6c-3951-42cb-86e2-59eb7f69a2cf"/>
+				</reportElement>
+				<text><![CDATA[scannedBy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="5c57d2f1-4714-4fa0-9621-415742faabc7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e95a845-3d5c-4114-a66e-a4ac9747f8f5"/>
+				</reportElement>
+				<text><![CDATA[scanTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="503db767-7cf3-4e7b-8e3a-0ed9e757c379">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17cf1a07-4d24-4053-a2c3-3f7b6dde6b0f"/>
+				</reportElement>
+				<text><![CDATA[status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="bc7cf3f9-bd02-49ad-bdfb-31e44e42965c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d67ce25c-6995-4926-a237-4fd56125782d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="30" uuid="214c0ba7-2c80-44ae-a7c4-71193bce6b3f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89510cb0-8865-4b50-80db-37edac80dca4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{qrCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="1287e222-a7e7-4f57-a0cc-411562f80328">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0e492e6c-3951-42cb-86e2-59eb7f69a2cf"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{scannedBy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="ef1a6664-e3bf-4976-bf05-faa8408ad055">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e95a845-3d5c-4114-a66e-a4ac9747f8f5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{scanTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="b460864d-dc47-4eb6-bfce-101a4d586ebb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="17cf1a07-4d24-4053-a2c3-3f7b6dde6b0f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
