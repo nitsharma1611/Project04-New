@@ -328,18 +328,15 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								Alert
 						</a></li>
 
-						<li><hr class="dropdown-divider border-secondary"></li>
+						
 
-						<!-- People -->
-						<li>
-							<h6 class="dropdown-header text-uppercase text-warning small">
-								<i class="bi bi-people me-1"></i> People
-							</h6>
-						</li>
+						
 						<li><a class="dropdown-item"
 							href="<%=ORSView.VOICE_COMMAND_LIST_CTL%>" target="_blank"> <i
 								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Voice Command
 						</a></li>
+						
+						<li><hr class="dropdown-divider border-secondary"></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.QR_SCANNER_LIST_CTL%>" target="_blank"> <i
 								class="bi bi-file-earmark-pdf me-2 text-warning"></i> QR Scanner
@@ -359,9 +356,31 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							href="<%=ORSView.ENERGY_CONSUMPTION_LIST_CTL%>" target="_blank"> <i
 								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Energy Consumption List
 						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.AI_RECOMMENDATION_LIST_CTL%>" target="_blank">
+								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> AI Recommendation
+						</a></li>
 					</ul></li>
 
+	<!--Daily Module Second  -->
 
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle px-3 py-3" href="#"
+					data-bs-toggle="dropdown" aria-expanded="false"> <i
+						class="bi bi-file-earmark-bar-graph me-1"></i> Daily Module Two
+				</a>
+					<ul
+						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
+						style="min-width: 230px; background: #1a2e4a;">
+
+						<!-- Academics -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-warning small">
+								<i class="bi bi-mortarboard me-1"></i> Academics
+							</h6>
+						</li>
+						
+											</ul></li>
 
 
 				<%

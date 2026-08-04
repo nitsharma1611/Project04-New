@@ -1,7 +1,8 @@
 
 
 
-<%@page import="com.sunilos.p4.bean.EnergyConsumptionBean"%>
+<%@page import="com.sunilos.p4.bean.AIRecommendationBean"%>
+
 <%@page import="com.sunilos.p4.ctl.BaseCtl"%>
 <%@page import="com.sunilos.p4.ctl.ORSView"%>
 <%@page import="com.sunilos.p4.util.ServletUtility"%>
@@ -15,7 +16,7 @@ int pageSize = ServletUtility.getPageSize(request);
 int index = ((pageNo - 1) * pageSize) + 1;
 
 List list = ServletUtility.getList(request);
-Iterator<EnergyConsumptionBean> it = list.iterator();
+Iterator<AIRecommendationBean> it = list.iterator();
 
 String _err = ServletUtility.getErrorMessage(request);
 String _suc = ServletUtility.getSuccessMessage(request);
@@ -30,27 +31,27 @@ String _suc = ServletUtility.getSuccessMessage(request);
 			style="background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%);">
 
 			<h5 class="mb-0 fw-bold">
-				<i class="bi bi-p-square-fill me-2"></i>EnergyConsumption List
+				<i class="bi bi-p-square-fill me-2"></i>AIRecommendation List
 			</h5>
 
 			<div class="d-flex gap-2">
 
-				<a href="<%=ORSView.ENERGY_CONSUMPTION_REPORT_CTL%>" target="_blank"
+				<a href="<%=ORSView.AI_RECOMMENDATION_REPORT_CTL%>" target="_blank"
 					class="btn btn-warning btn-sm fw-semibold"> <i
 					class="bi bi-file-earmark-pdf"></i> Print PDF
-				</a> <a href="<%=ORSView.ENERGY_CONSUMPTION_REPORT_CTL%>?type=doc"
+				</a> <a href="<%=ORSView.AI_RECOMMENDATION_REPORT_CTL%>?type=doc"
 					target="_blank" class="btn btn-info btn-sm fw-semibold"> <i
 					class="bi bi-file-earmark-word"></i> Print DOC
-				</a> <a href="<%=ORSView.ENERGY_CONSUMPTION_CTL%>"
+				</a> <a href="<%=ORSView.AI_RECOMMENDATION_CTL%>"
 					class="btn btn-light btn-sm text-primary fw-semibold"> <i
-					class="bi bi-plus-circle"></i> Add Smart Light
+					class="bi bi-plus-circle"></i> Add AI Recommendation
 				</a>
 
 			</div>
 
 		</div>
 
-		<form action="<%=ORSView.ENERGY_CONSUMPTION_LIST_CTL%>" method="post">
+		<form action="<%=ORSView.AI_RECOMMENDATION_LIST_CTL%>" method="post">
 
 			<input type="hidden" name="pageNo" value="<%=pageNo%>"> <input
 				type="hidden" name="pageSize" value="<%=pageSize%>">
@@ -59,23 +60,22 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 			<div class="p-3 bg-light border-bottom d-flex flex-wrap gap-2">
 
-				<input type="text" name="energyCode"
+				<input type="text" name="recommendationCode"
 					class="form-control form-control-sm" style="max-width: 220px"
-					placeholder="Search energyCode"
-					value="<%=ServletUtility.getParameter("energyCode", request)%>">
+					placeholder="Search recommendationCode"
+					value="<%=ServletUtility.getParameter("recommendationCode", request)%>">
 				
-				<input type="text" name="deviceName"
+				<input type="text" name="userName"
 					class="form-control form-control-sm" style="max-width: 220px"
-					placeholder="deviceName"
-					value="<%=ServletUtility.getParameter("deviceName", request)%>">
+					placeholder="userName"
+					value="<%=ServletUtility.getParameter("userName", request)%>">
 
-<input type="text" name="unitsConsumed"
+<input type="text" name="status"
 					class="form-control form-control-sm" style="max-width: 220px"
-					placeholder="unitsConsumed"
-					value="<%=ServletUtility.getParameter("unitsConsumed", request)%>">
+					placeholder="status"
+					value="<%=ServletUtility.getParameter("status", request)%>">
 
-
-				<button type="submit" name="operation"
+<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 
 					<i class="bi bi-search"></i> Search
@@ -135,9 +135,9 @@ String _suc = ServletUtility.getSuccessMessage(request);
 							</th>
 
 							<th>#</th>
-							<th>Energy Code</th>
-							<th>Device Name</th>
-							<th>Units Consumed</th>
+							<th>Recommendation Code</th>
+							<th>User Name</th>
+							<th>Recommendation Type</th>
 
 							<th>Status</th>
 							<th>Action</th>
@@ -150,7 +150,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 						<%
 						while (it.hasNext()) {
-							EnergyConsumptionBean bean = it.next();
+							AIRecommendationBean bean = it.next();
 						%>
 
 						<tr>
@@ -160,16 +160,16 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 							<td><%=index++%></td>
 
-							<td><%=bean.getEnergyCode()%></td>
+							<td><%=bean.getRecommendationCode()%></td>
 
-							<td><%=bean.getDeviceName()%></td>
+							<td><%=bean.getUserName()%></td>
 
-							<td><%=bean.getUnitsConsumed()%></td>
+							<td><%=bean.getRecommendationType()%></td>
 
 							<td><span class="badge bg-success"> <%=bean.getStatus()%>
 							</span></td>
 
-							<td><a href="EnergyConsumptionCtl?id=<%=bean.getId()%>"
+							<td><a href="AIRecommendationCtl?id=<%=bean.getId()%>"
 								class="btn btn-outline-primary btn-sm"> <i
 									class="bi bi-pencil"></i> Edit
 

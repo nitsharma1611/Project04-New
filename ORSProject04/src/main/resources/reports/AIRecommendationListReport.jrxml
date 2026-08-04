@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AIRecommendationListReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5ca25e72-ced5-4618-ad19-4fb3b71086ac">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="myadapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id,recommendationCode,userName,recommendationType,status FROM p04.ai_recommendation]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ai_recommendation"/>
+	</field>
+	<field name="recommendationCode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="recommendationCode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ai_recommendation"/>
+	</field>
+	<field name="userName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="userName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ai_recommendation"/>
+	</field>
+	<field name="recommendationType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="recommendationType"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ai_recommendation"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ai_recommendation"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="recommendationCode">
+		<groupExpression><![CDATA[$F{recommendationCode}]]></groupExpression>
+	</group>
+	<group name="userName">
+		<groupExpression><![CDATA[$F{userName}]]></groupExpression>
+	</group>
+	<group name="recommendationType">
+		<groupExpression><![CDATA[$F{recommendationType}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="ec1b349d-fd1e-4479-98d2-ea49f8a6cefa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0bbbf4c-ad91-432b-a7cb-2753de1465e4"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="ecbcf6a6-caf3-439f-970e-73ffe74f6a98">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e6f2542f-0685-46b3-8859-9d94903eb105"/>
+				</reportElement>
+				<text><![CDATA[recommendationCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="417000de-e138-4ab8-ad6c-e3c120a07949">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a2f12ad-b639-49e1-b6e6-b956c77954fc"/>
+				</reportElement>
+				<text><![CDATA[userName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="a42b834b-72e6-42de-8dbb-7a58e94c4ac4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7c240f9f-f487-4fae-b08b-695acbac143d"/>
+				</reportElement>
+				<text><![CDATA[recommendationType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="014dd395-367b-4d9d-8e86-97ddd06b8009">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="41dd44fa-68fa-4d7e-92a4-81dd98487a99"/>
+				</reportElement>
+				<text><![CDATA[status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="96dfd228-3e40-46a8-9f41-98d29954b098">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e0bbbf4c-ad91-432b-a7cb-2753de1465e4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="30" uuid="2540a605-5607-4cd1-bdd3-73449d1e1773">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e6f2542f-0685-46b3-8859-9d94903eb105"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{recommendationCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="a698b6fd-caee-421f-9235-872940c9ce0c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a2f12ad-b639-49e1-b6e6-b956c77954fc"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="738967ac-b514-400b-9532-0437d27a0b16">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7c240f9f-f487-4fae-b08b-695acbac143d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{recommendationType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="990a81fb-fccd-4de1-95bc-135c7f193121">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="41dd44fa-68fa-4d7e-92a4-81dd98487a99"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
