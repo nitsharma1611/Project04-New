@@ -13,18 +13,19 @@ public class AIRecommendationModelTest {
 
 	public static void main(String[] args) throws Exception {
 
-		// testNextPK();
+		
+		//testNextPK();
 		// testAdd();
 		// testUpdate();
-		// testDelete();
-		// testFindByPk();
+		 //testDelete();
+		 //testFindByPk();
 		// testFindByRecommendationCode();
-		// testFindByUniqueColumn();
+		 //testFindByUniqueColumn();
 
 		// testSearch();
 		// testSearchPage();
 		// testList();
-		// testListPage();
+		 testListPage();
 	}
 
 	public static void testNextPK() throws Exception {
@@ -99,7 +100,7 @@ public class AIRecommendationModelTest {
 
 	public static void testFindByRecommendationCode() throws Exception {
 
-		AIRecommendationBean bean = model.findByRecommendationCode("AR001");
+		AIRecommendationBean bean = model.findByRecommendationCode("REC014");
 
 		if (bean != null) {
 
@@ -117,7 +118,7 @@ public class AIRecommendationModelTest {
 
 	public static void testFindByUniqueColumn() throws Exception {
 
-		AIRecommendationBean bean = model.findByUniqueColumn("recommendationCode", "AR001");
+		AIRecommendationBean bean = model.findByUniqueColumn("recommendationCode", "REC014");
 
 		if (bean != null) {
 
@@ -134,7 +135,7 @@ public class AIRecommendationModelTest {
 
 		AIRecommendationBean bean = new AIRecommendationBean();
 
-		bean.setStatus("Active");
+		bean.setStatus("Approved");
 
 		List<AIRecommendationBean> list = model.search(bean);
 
@@ -156,7 +157,7 @@ public class AIRecommendationModelTest {
 
 		AIRecommendationBean bean = new AIRecommendationBean();
 
-		bean.setStatus("Active");
+		bean.setStatus("Approved");
 
 		List<AIRecommendationBean> list = model.search(bean, 1, 5);
 

@@ -69,7 +69,10 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					placeholder="deviceName"
 					value="<%=ServletUtility.getParameter("deviceName", request)%>">
 
-
+<input type="text" name="unitsConsumed"
+					class="form-control form-control-sm" style="max-width: 220px"
+					placeholder="unitsConsumed"
+					value="<%=ServletUtility.getParameter("unitsConsumed", request)%>">
 
 
 				<button type="submit" name="operation"

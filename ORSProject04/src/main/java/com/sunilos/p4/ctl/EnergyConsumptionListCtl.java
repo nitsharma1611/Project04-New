@@ -35,6 +35,7 @@ public class EnergyConsumptionListCtl extends BaseListCtl<EnergyConsumptionBean,
 
 		bean.setEnergyCode(DataUtility.getString(request.getParameter("energyCode")));
 bean.setDeviceName(DataUtility.getString(request.getParameter("deviceName")));
+bean.setUnitsConsumed(DataUtility.getDouble(request.getParameter("unitsConsumed")));
 
 		return bean;
 	}

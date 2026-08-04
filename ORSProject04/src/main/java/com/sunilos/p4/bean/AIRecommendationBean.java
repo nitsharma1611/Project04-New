@@ -4,66 +4,59 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class AIRecommendationBean extends BaseBean {
-private String recommendationCode;
-private String userName;
-private String recommendationType;
-private String status;
+	private String recommendationCode;
+	private String userName;
+	private String recommendationType;
+	private String status;
 
-	
-	
-	
-	
-	
-	
-	
 	public String getRecommendationCode() {
-	return recommendationCode;
-}
+		return recommendationCode;
+	}
 
-public void setRecommendationCode(String recommendationCode) {
-	this.recommendationCode = recommendationCode;
-}
+	public void setRecommendationCode(String recommendationCode) {
+		this.recommendationCode = recommendationCode;
+	}
 
-public String getUserName() {
-	return userName;
-}
+	public String getUserName() {
+		return userName;
+	}
 
-public void setUserName(String userName) {
-	this.userName = userName;
-}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
-public String getRecommendationType() {
-	return recommendationType;
-}
+	public String getRecommendationType() {
+		return recommendationType;
+	}
 
-public void setRecommendationType(String recommendationType) {
-	this.recommendationType = recommendationType;
-}
+	public void setRecommendationType(String recommendationType) {
+		this.recommendationType = recommendationType;
+	}
 
-public String getStatus() {
-	return status;
-}
+	public String getStatus() {
+		return status;
+	}
 
-public void setStatus(String status) {
-	this.status = status;
-}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 	@Override
 	public String getKey() {
 		// TODO Auto-generated method stub
-		return null;
+		return id+"";
 	}
 
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
-		return null;
+		return status;
 	}
 
 	@Override
 	public void setResultset(ResultSet rs) {
 		try {
-			super.setResultset(rs);	
+			super.setResultset(rs);
 			this.setRecommendationCode(rs.getString(2));
 			this.setUserName(rs.getString(3));
 			this.setRecommendationType(rs.getString(4));
@@ -71,7 +64,7 @@ public void setStatus(String status) {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }

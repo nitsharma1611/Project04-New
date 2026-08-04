@@ -143,7 +143,7 @@ public AIRecommendationBean findByRecommendationCode(String recommendationCode) 
 	@Override
 	public String getTable() {
 		
-		return "";
+		return "ai_recommendation";
 	}
 
 	@Override

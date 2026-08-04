@@ -174,7 +174,7 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 		String op = DataUtility.getString(request.getParameter("operation"));
 
 		long id = DataUtility.getLong(request.getParameter("id"));
-System.out.println("id "+id);
+
 		if (id > 0 || op != null) {
 			BaseBean bean = getModel().findByPK(id);
 			ServletUtility.setBean(bean, request);
