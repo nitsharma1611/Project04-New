@@ -63,7 +63,8 @@ public interface ORSView {
 	public String SMART_LIGHT_LIST_VIEW = PAGE_FOLDER + "/SmartLightListView.jsp";
 	public String ENERGY_CONSUMPTION_VIEW = PAGE_FOLDER + "/EnergyConsumptionView.jsp";
 	public String ENERGY_CONSUMPTION_LIST_VIEW = PAGE_FOLDER + "/EnergyConsumptionListView.jsp";
-	
+	public String AI_RECOMMENDATION_VIEW = PAGE_FOLDER + "/AIRecommendationView.jsp";
+	public String AI_RECOMMENDATION_LIST_VIEW = PAGE_FOLDER + "/AIRecommendationListView.jsp";
 	
 	
 	
@@ -117,7 +118,8 @@ public interface ORSView {
 	public String SMART_LIGHT_LIST_CTL = APP_CONTEXT + "/ctl/SmartLightListCtl";
 	public String ENERGY_CONSUMPTION_CTL = APP_CONTEXT + "/ctl/EnergyConsumptionCtl";
 	public String ENERGY_CONSUMPTION_LIST_CTL = APP_CONTEXT + "/ctl/EnergyConsumptionListCtl";
-	
+	public String AI_RECOMMENDATION_CTL = APP_CONTEXT + "/ctl/AIRecommendationCtl";
+	public String AI_RECOMMENDATION_LIST_CTL = APP_CONTEXT + "/ctl/AIRecommendationListCtl";
 	
 	
 	
@@ -137,7 +139,7 @@ public interface ORSView {
 	public String WATER_MONITORING_REPORT_CTL = APP_CONTEXT + "/ctl/WaterMonitoringReportCtl";
 	public String SMART_LIGHT_REPORT_CTL = APP_CONTEXT + "/ctl/SmartLightReportCtl";
 	public String ENERGY_CONSUMPTION_REPORT_CTL = APP_CONTEXT + "/ctl/EnergyConsumptionReportCtl";
-	
+	public String AI_RECOMMENDATION_REPORT_CTL = APP_CONTEXT + "/ctl/AIRecommendationReportCtl";
 	
 	
 	
@@ -156,4 +158,5 @@ public interface ORSView {
 	public String WATER_MONITORING_REPORT_VIEW = "/reports/WaterMonitoringListReport.jrxml";
 	public String SMART_LIGHT_REPORT_VIEW = "/reports/SmartLightListReport.jrxml";
 	public String ENERGY_CONSUMPTION_REPORT_VIEW = "/reports/EnergyConsumptionListReport.jrxml";
+	public String AI_RECOMMENDATION_REPORT_VIEW = "/reports/AIRecommendationListReport.jrxml";
 }
