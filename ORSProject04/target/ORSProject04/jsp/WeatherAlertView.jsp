@@ -1,3 +1,4 @@
+<%@page import="com.sunilos.p4.util.MessageSource"%>
 <%@page import="com.sunilos.p4.ctl.ORSView"%>
 <%@page import="com.sunilos.p4.util.HTMLUtility"%>
 <%@page import="java.util.HashMap"%>
@@ -6,11 +7,12 @@
 <%@page import="com.sunilos.p4.util.DataUtility"%>
 <%@page import="com.sunilos.p4.util.ServletUtility"%>
 
-<jsp:useBean id="bean"
-	class="com.sunilos.p4.bean.WeatherAlertBean"
+<jsp:useBean id="bean" class="com.sunilos.p4.bean.WeatherAlertBean"
 	scope="request"></jsp:useBean>
 
 <%
+MessageSource ms = MessageSource.getInstance();
+
 String _suc = ServletUtility.getSuccessMessage(request);
 String _err = ServletUtility.getErrorMessage(request);
 HashMap statusMap = new HashMap();
@@ -24,12 +26,12 @@ statusMap.put("Extreme Heat", "Extreme Heat");
 statusMap.put("Cold", "Cold");
 %>
 
-<div class="container py-4" style="max-width:650px;">
+<div class="container py-4" style="max-width: 650px;">
 
 	<div class="card border-0 shadow-sm rounded-4">
 
 		<div class="card-header text-white py-3"
-			style="background:linear-gradient(135deg,#0d2137,#1565c0);">
+			style="background: linear-gradient(135deg, #0d2137, #1565c0);">
 
 			<h5 class="mb-0 fw-bold">
 				<i class="bi bi-p-square-fill me-2"></i>
@@ -62,17 +64,14 @@ statusMap.put("Cold", "Cold");
 			}
 			%>
 
-			<form action="<%=ORSView.WEATHERALERT_CTL %>" method="post">
+			<form action="<%=ORSView.WEATHERALERT_CTL%>" method="post">
 
-				<input type="hidden" name="id" value="<%=bean.getId()%>">
-
-				<input type="hidden" name="createdBy"
-					value="<%=bean.getCreatedBy()%>">
+				<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
+					type="hidden" name="createdBy" value="<%=bean.getCreatedBy()%>">
 
 				<input type="hidden" name="modifiedBy"
-					value="<%=bean.getModifiedBy()%>">
-
-				<input type="hidden" name="createdDatetime"
+					value="<%=bean.getModifiedBy()%>"> <input type="hidden"
+					name="createdDatetime"
 					value="<%=DataUtility.getTimestamp(bean.getCreatedDatetime())%>">
 
 				<input type="hidden" name="modifiedDatetime"
@@ -82,14 +81,9 @@ statusMap.put("Cold", "Cold");
 				<!-- Parking Code -->
 
 				<div class="mb-3">
-					<label class="form-label fw-semibold">
-						Alert Code
-						<span class="text-danger">*</span>
-					</label>
-
-					<input type="text"
-						name="alertCode"
-						class="form-control"
+					<label class="form-label fw-semibold"> Alert Code <span
+						class="text-danger">*</span>
+					</label> <input type="text" name="alertCode" class="form-control"
 						value="<%=DataUtility.getStringData(bean.getAlertCode())%>">
 
 					<div class="text-danger small mt-1">
@@ -101,14 +95,9 @@ statusMap.put("Cold", "Cold");
 				<!-- Vehicle Number -->
 
 				<div class="mb-3">
-					<label class="form-label fw-semibold">
-						City Name
-						<span class="text-danger">*</span>
-					</label>
-
-					<input type="text"
-						name="cityName"
-						class="form-control"
+					<label class="form-label fw-semibold"> City Name <span
+						class="text-danger">*</span>
+					</label> <input type="text" name="cityName" class="form-control"
 						value="<%=DataUtility.getStringData(bean.getCityName())%>">
 
 					<div class="text-danger small mt-1">
@@ -118,67 +107,56 @@ statusMap.put("Cold", "Cold");
 
 
 				<!-- Slot Number -->
-<div class="row g-3 mb-3">
-				<div class="col-md-6">
-					<label class="form-label fw-semibold">
-						Temperature
-						<span class="text-danger">*</span>
-					</label>
+				<div class="row g-3 mb-3">
+					<div class="col-md-6">
+						<label class="form-label fw-semibold"> Temperature <span
+							class="text-danger">*</span>
+						</label> <input type="text" name="temperature" class="form-control"
+							value="<%=DataUtility.getStringData(bean.getTemperature())%>">
 
-					<input type="text"
-						name="temperature"
-						class="form-control"
-						value="<%=DataUtility.getStringData(bean.getTemperature())%>">
-
-					<div class="text-danger small mt-1">
-						<%=ServletUtility.getErrorMessage("temperature", request)%>
+						<div class="text-danger small mt-1">
+							<%=ServletUtility.getErrorMessage("temperature", request)%>
+						</div>
 					</div>
-				</div>
 
 
-				<!-- Status -->
+					<!-- Status -->
 
-				<div class="col-md-6">
-					<label class="form-label fw-semibold">
-						Status
-						<span class="text-danger">*</span>
-					</label>
-					<%=HTMLUtility.getList("status", bean.getStatus(),statusMap) %>
+					<div class="col-md-6">
+						<label class="form-label fw-semibold"> Status <span
+							class="text-danger">*</span>
+						</label>
+						<%=HTMLUtility.getList("status", bean.getStatus(), statusMap)%>
 					</div>
-					
+
 
 					<div class="text-danger small mt-1">
 						<%=ServletUtility.getErrorMessage("status", request)%>
 					</div>
 				</div>
-</div>
+		</div>
 
-				<div class="d-flex border-top pt-3">
+		<div class="d-flex border-top pt-3">
 
-					<button type="submit"
-						name="operation"
-						value="<%=BaseCtl.OP_SAVE%>"
-						class="btn btn-primary">
+			<button type="submit" name="operation" value="<%=BaseCtl.OP_SAVE%>"
+				class="btn btn-primary">
 
-						<i class="bi bi-save me-1"></i>
-						Save
+				<i class="bi bi-save me-1"></i> Save
 
-					</button>
+			</button>
 
-					<a href="WeatherAlertListCtl?id=0"
-						class="btn btn-secondary ms-auto">
+			<a href="WeatherAlertListCtl?id=0" class="btn btn-secondary ms-auto">
 
-						<i class="bi bi-x-circle me-1"></i>
-						Cancel
+				<i class="bi bi-x-circle me-1"></i> Cancel
 
-					</a>
-
-				</div>
-
-			</form>
+			</a>
 
 		</div>
 
+		</form>
+
 	</div>
+
+</div>
 
 </div>

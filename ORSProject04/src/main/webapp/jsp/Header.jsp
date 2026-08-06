@@ -379,6 +379,14 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-mortarboard me-1"></i> Academics
 							</h6>
 						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DEPARTMENT_LIST_CTL%>" target="_blank">
+								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Department List
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.EXAM_LIST_CTL%>" target="_blank">
+								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Exam List
+						</a></li>
 						
 											</ul></li>
 

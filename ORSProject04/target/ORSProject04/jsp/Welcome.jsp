@@ -283,32 +283,7 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 			</a>
 		</div>
 		
-		<div class="col-6 col-md-4 col-lg-3">
-			<a href="<%=ORSView.WEATHERALERT_LIST_CTL%>" class="text-decoration-none">
-				<div
-					class="card h-100 border-0 shadow-sm rounded-4 text-center p-3 ors-card"
-					style="border-top: 4px solid #0891b2;">
-					<div class="fs-1 mb-2" style="color: #0891b2;">
-						<i class="bi bi-cloud-sun"></i>
-					</div>
-					<h6 class="fw-bold mb-1">Weather Alert</h6>
-					<p class="text-muted small mb-0">Temperature </p>
-				</div>
-			</a>
-		</div>
-		<div class="col-6 col-md-4 col-lg-3">
-			<a href="<%=ORSView.VOICE_COMMAND_LIST_CTL%>" class="text-decoration-none">
-				<div
-					class="card h-100 border-0 shadow-sm rounded-4 text-center p-3 ors-card"
-					style="border-top: 4px solid #0891b2;">
-					<div class="fs-1 mb-2" style="color: #0891b2;">
-						<i class="bi bi-mic"></i>
-					</div>
-					<h6 class="fw-bold mb-1">Voice Command</h6>
-					<p class="text-muted small mb-0">Microphone </p>
-				</div>
-			</a>
-		</div>
+		
 		<%
 		} else {
 		%>

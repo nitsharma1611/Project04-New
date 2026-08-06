@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ExamListReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df93184f-d73c-44b8-a6c5-ec5ebf72adb6">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="myadapter"/>
+	<queryString language="SQL">
+		<![CDATA[select id,examName, examDate, totalMarks,passingMarks from p04.st_exam]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_exam"/>
+	</field>
+	<field name="examName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="examName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_exam"/>
+	</field>
+	<field name="examDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="examDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_exam"/>
+	</field>
+	<field name="totalMarks" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="totalMarks"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_exam"/>
+	</field>
+	<field name="passingMarks" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="passingMarks"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_exam"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="examName">
+		<groupExpression><![CDATA[$F{examName}]]></groupExpression>
+	</group>
+	<group name="examDate">
+		<groupExpression><![CDATA[$F{examDate}]]></groupExpression>
+	</group>
+	<group name="totalMarks">
+		<groupExpression><![CDATA[$F{totalMarks}]]></groupExpression>
+	</group>
+	<group name="passingMarks">
+		<groupExpression><![CDATA[$F{passingMarks}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="5fe4b629-5ca4-42d5-9d56-392382529d19">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="130b2eb4-0eac-4114-9ed7-425ae2dba4ee"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="4154337c-0eb4-497c-b37f-bcc93e609acd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad3014cb-6915-462d-945e-41f0fe9916a5"/>
+				</reportElement>
+				<text><![CDATA[examName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="cf6549ed-b319-4f3a-9a21-57b47f4f8108">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5be8763f-3a6e-4115-9850-6590fb09a21b"/>
+				</reportElement>
+				<text><![CDATA[examDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="6a3bc668-8809-49bc-b3d3-85094b5ba71b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f42b90f4-3fbd-42b5-93c2-7f7039808f6e"/>
+				</reportElement>
+				<text><![CDATA[totalMarks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="0114c2d1-a824-4901-a62d-6c2cd272c37e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2d6cf817-79f2-40e9-8ae9-cc746815e8e6"/>
+				</reportElement>
+				<text><![CDATA[passingMarks]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="3a337050-a383-4234-9426-1bda1c27d859">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="130b2eb4-0eac-4114-9ed7-425ae2dba4ee"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="30" uuid="89555a8d-e21f-407b-8ace-be1d7dde833d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad3014cb-6915-462d-945e-41f0fe9916a5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{examName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="2ff3063f-5724-4f22-b9e6-2be92bafb7b5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5be8763f-3a6e-4115-9850-6590fb09a21b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{examDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="95d777f1-c4a5-41bf-aa97-188b55423551">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f42b90f4-3fbd-42b5-93c2-7f7039808f6e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{totalMarks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="ceb7834c-8db7-4dd5-8c27-03cc9d6df250">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2d6cf817-79f2-40e9-8ae9-cc746815e8e6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{passingMarks}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

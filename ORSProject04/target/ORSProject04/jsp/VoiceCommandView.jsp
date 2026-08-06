@@ -162,7 +162,7 @@ statusMap.put("Completed", "Completed");
 
 					</button>
 
-					<a href="VoiceCommandCtl?id=0"
+					<a href="VoiceCommandListCtl?id=0"
 						class="btn btn-secondary ms-auto">
 
 						<i class="bi bi-x-circle me-1"></i>

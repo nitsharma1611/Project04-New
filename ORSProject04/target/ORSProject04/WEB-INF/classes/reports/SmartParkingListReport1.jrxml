@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SmartParkingList" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4182ce6f-904a-4ed5-81f6-ae5d6126cb19">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="myadapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id, parkingCode, vehicleNumber,slotNumber,status from st_smartparking]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_smartparking"/>
+	</field>
+	<field name="parkingCode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="parkingCode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_smartparking"/>
+	</field>
+	<field name="vehicleNumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="vehicleNumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_smartparking"/>
+	</field>
+	<field name="slotNumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="slotNumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_smartparking"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_smartparking"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="parkingCode">
+		<groupExpression><![CDATA[$F{parkingCode}]]></groupExpression>
+	</group>
+	<group name="vehicleNumber">
+		<groupExpression><![CDATA[$F{vehicleNumber}]]></groupExpression>
+	</group>
+	<group name="slotNumber">
+		<groupExpression><![CDATA[$F{slotNumber}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="554dbdbe-3c6c-4253-a876-47c1a078210f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25d97b19-8337-4bc6-9df1-2c7cc6c252d8"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="763af51b-0e77-4128-929f-cfbed04bba10">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c3d36291-b042-48ee-84af-edd246c1d51d"/>
+				</reportElement>
+				<text><![CDATA[parkingCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="b36b87c9-e4c6-4dd6-9c8d-2dd59f4f9dcc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="20ab2bae-04f2-4572-b4c1-64b5e2a35d1d"/>
+				</reportElement>
+				<text><![CDATA[vehicleNumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="7981d6c6-1ab7-4517-ac29-c1c71f1bdfed">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a87b44c2-ed36-4676-b2b2-ea0434981e7c"/>
+				</reportElement>
+				<text><![CDATA[slotNumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="b61bba57-a7e9-46c0-bddd-86c5da339fa4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bb2b0165-061b-4e08-8ea5-868be361c641"/>
+				</reportElement>
+				<text><![CDATA[status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="729f110d-2457-4dbd-8169-8706e9faa95f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25d97b19-8337-4bc6-9df1-2c7cc6c252d8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="30" uuid="629b93e0-c092-409f-aea3-b4d06fdd256b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c3d36291-b042-48ee-84af-edd246c1d51d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{parkingCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="8ef83afa-ee1f-4efa-924a-0fa5ba54f7c0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="20ab2bae-04f2-4572-b4c1-64b5e2a35d1d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{vehicleNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="ee378b34-bc27-4e7a-9410-040abfd5024c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a87b44c2-ed36-4676-b2b2-ea0434981e7c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{slotNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="fe1d7c57-046e-425f-abe1-4fd0acdbb391">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bb2b0165-061b-4e08-8ea5-868be361c641"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
