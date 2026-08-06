@@ -65,10 +65,16 @@ public interface ORSView {
 	public String ENERGY_CONSUMPTION_LIST_VIEW = PAGE_FOLDER + "/EnergyConsumptionListView.jsp";
 	public String AI_RECOMMENDATION_VIEW = PAGE_FOLDER + "/AIRecommendationView.jsp";
 	public String AI_RECOMMENDATION_LIST_VIEW = PAGE_FOLDER + "/AIRecommendationListView.jsp";
+<<<<<<< HEAD
 	public String DEPARTMENT_VIEW = PAGE_FOLDER + "/DepartmentView.jsp";
 	public String DEPARTMENT_LIST_VIEW = PAGE_FOLDER + "/DepartmentListView.jsp";
 	public String EXAM_VIEW = PAGE_FOLDER + "/ExamView.jsp";
 	public String EXAM_LIST_VIEW = PAGE_FOLDER + "/ExamListView.jsp";
+=======
+	
+	
+	
+>>>>>>> 0bf53e7e6b97a1c2bcebdd1f689675b5b2216568
 	
 
 	public String ERROR_CTL = "/ctl/MarksheetCtl";
@@ -121,11 +127,16 @@ public interface ORSView {
 	public String ENERGY_CONSUMPTION_LIST_CTL = APP_CONTEXT + "/ctl/EnergyConsumptionListCtl";
 	public String AI_RECOMMENDATION_CTL = APP_CONTEXT + "/ctl/AIRecommendationCtl";
 	public String AI_RECOMMENDATION_LIST_CTL = APP_CONTEXT + "/ctl/AIRecommendationListCtl";
+<<<<<<< HEAD
 	public String DEPARTMENT_CTL = APP_CONTEXT + "/ctl/DepartmentCtl";
 	public String DEPARTMENT_LIST_CTL = APP_CONTEXT + "/ctl/DepartmentListCtl";
 	
 	public String EXAM_CTL = APP_CONTEXT + "/ctl/ExamCtl";
 	public String EXAM_LIST_CTL = APP_CONTEXT + "/ctl/ExamListCtl";
+=======
+	
+	
+>>>>>>> 0bf53e7e6b97a1c2bcebdd1f689675b5b2216568
 	
 	
 	
@@ -144,9 +155,14 @@ public interface ORSView {
 	public String SMART_LIGHT_REPORT_CTL = APP_CONTEXT + "/ctl/SmartLightReportCtl";
 	public String ENERGY_CONSUMPTION_REPORT_CTL = APP_CONTEXT + "/ctl/EnergyConsumptionReportCtl";
 	public String AI_RECOMMENDATION_REPORT_CTL = APP_CONTEXT + "/ctl/AIRecommendationReportCtl";
+<<<<<<< HEAD
 	public String DEPARTMENT_REPORT_CTL = APP_CONTEXT + "/ctl/DepartmentReportCtl";
 	
 	public String EXAM_REPORT_CTL = APP_CONTEXT + "/ctl/ExamReportCtl";
+=======
+	
+	
+>>>>>>> 0bf53e7e6b97a1c2bcebdd1f689675b5b2216568
 	
 	
 
@@ -164,6 +180,9 @@ public interface ORSView {
 	public String SMART_LIGHT_REPORT_VIEW = "/reports/SmartLightListReport.jrxml";
 	public String ENERGY_CONSUMPTION_REPORT_VIEW = "/reports/EnergyConsumptionListReport.jrxml";
 	public String AI_RECOMMENDATION_REPORT_VIEW = "/reports/AIRecommendationListReport.jrxml";
+<<<<<<< HEAD
 	public String DEPARTMENT_REPORT_VIEW = "/reports/DepartmentListReport.jrxml";
 	public String EXAM_REPORT_VIEW = "/reports/ExamListReport.jrxml";
+=======
+>>>>>>> 0bf53e7e6b97a1c2bcebdd1f689675b5b2216568
 }

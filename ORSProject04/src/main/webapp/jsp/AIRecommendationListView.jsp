@@ -64,18 +64,30 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					class="form-control form-control-sm" style="max-width: 220px"
 					placeholder="Search recommendationCode"
 					value="<%=ServletUtility.getParameter("recommendationCode", request)%>">
+<<<<<<< HEAD
 
+=======
+				
+>>>>>>> 0bf53e7e6b97a1c2bcebdd1f689675b5b2216568
 				<input type="text" name="userName"
 					class="form-control form-control-sm" style="max-width: 220px"
 					placeholder="userName"
 					value="<%=ServletUtility.getParameter("userName", request)%>">
 
+<<<<<<< HEAD
 				<input type="text" name="status"
+=======
+<input type="text" name="status"
+>>>>>>> 0bf53e7e6b97a1c2bcebdd1f689675b5b2216568
 					class="form-control form-control-sm" style="max-width: 220px"
 					placeholder="status"
 					value="<%=ServletUtility.getParameter("status", request)%>">
 
+<<<<<<< HEAD
 				<button type="submit" name="operation"
+=======
+<button type="submit" name="operation"
+>>>>>>> 0bf53e7e6b97a1c2bcebdd1f689675b5b2216568
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 
 					<i class="bi bi-search"></i> Search
