@@ -32,21 +32,21 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 			<div class="d-flex gap-2">
 
-				 <a href="<%=ORSView.SMART_PARKING_REPORT_CTL%>"
+		<%-- 		 <a href="<%=ORSView.SMARTPARKING_REPORT_CTL%>"
 					target="_blank"
 					class="btn btn-warning btn-sm fw-semibold">
 
 					<i class="bi bi-file-earmark-pdf"></i>
 					Print PDF
 				</a>
-  			<a href="<%=ORSView.SMART_PARKING_REPORT_CTL%>?type=doc"
+  			<a href="<%=ORSView.SMARTPARKING_REPORT_CTL%>?type=doc"
 					target="_blank"
 					class="btn btn-info btn-sm fw-semibold">
 
 					<i class="bi bi-file-earmark-word"></i>
 					Print DOC
 				</a>
-
+ --%>
 	<a href="<%=ORSView.SMART_PARKING_CTL%>"
 					class="btn btn-light btn-sm text-primary fw-semibold">
 

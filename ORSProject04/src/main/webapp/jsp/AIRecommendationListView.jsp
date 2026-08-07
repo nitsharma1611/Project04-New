@@ -1,6 +1,3 @@
-
-
-
 <%@page import="com.sunilos.p4.bean.AIRecommendationBean"%>
 
 <%@page import="com.sunilos.p4.ctl.BaseCtl"%>
@@ -64,30 +61,25 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					class="form-control form-control-sm" style="max-width: 220px"
 					placeholder="Search recommendationCode"
 					value="<%=ServletUtility.getParameter("recommendationCode", request)%>">
-<<<<<<< HEAD
 
-=======
-				
->>>>>>> 0bf53e7e6b97a1c2bcebdd1f689675b5b2216568
 				<input type="text" name="userName"
 					class="form-control form-control-sm" style="max-width: 220px"
 					placeholder="userName"
 					value="<%=ServletUtility.getParameter("userName", request)%>">
 
-<<<<<<< HEAD
-				<input type="text" name="status"
-=======
-<input type="text" name="status"
->>>>>>> 0bf53e7e6b97a1c2bcebdd1f689675b5b2216568
+
+				
+					<input type="text" name="status"
+
 					class="form-control form-control-sm" style="max-width: 220px"
 					placeholder="status"
 					value="<%=ServletUtility.getParameter("status", request)%>">
 
-<<<<<<< HEAD
-				<button type="submit" name="operation"
-=======
+
+			
+
 <button type="submit" name="operation"
->>>>>>> 0bf53e7e6b97a1c2bcebdd1f689675b5b2216568
+
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 
 					<i class="bi bi-search"></i> Search
@@ -104,9 +96,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 			</div>
 
-			<%
-			if (_err != null && !_err.isEmpty()) {
-			%>
+			<%if (_err != null && !_err.isEmpty()) {%>
 
 			<div class="alert alert-danger m-3">
 
@@ -115,13 +105,9 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 			</div>
 
-			<%
-			}
-			%>
+			<%}%>
 
-			<%
-			if (_suc != null && !_suc.isEmpty()) {
-			%>
+			<%if (_suc != null && !_suc.isEmpty()) {%>
 
 			<div class="alert alert-success m-3">
 
@@ -130,9 +116,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 			</div>
 
-			<%
-			}
-			%>
+			<%}%>
 
 			<div class="table-responsive">
 
@@ -160,10 +144,8 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 					<tbody>
 
-						<%
-						while (it.hasNext()) {
-							AIRecommendationBean bean = it.next();
-						%>
+						<%while (it.hasNext()) {
+	AIRecommendationBean bean = it.next();%>
 
 						<tr>
 
@@ -189,9 +171,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 						</tr>
 
-						<%
-						}
-						%>
+						<%}%>
 
 					</tbody>
 
