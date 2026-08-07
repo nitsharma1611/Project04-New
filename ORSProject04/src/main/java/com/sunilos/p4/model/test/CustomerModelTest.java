@@ -13,7 +13,7 @@ public class CustomerModelTest {
 
 	public static void main(String[] args) throws Exception {
 
-		// testNextPK();
+		 //testNextPK();
 		// testAdd();
 		// testUpdate();
 		// testDelete();
@@ -38,7 +38,7 @@ public class CustomerModelTest {
 		CustomerBean bean = new CustomerBean();
 
 		bean.setCustomerName("Nitin Sharma");
-		bean.setEmail("nitin@gmail.com");
+		bean.setEmail("nit@gmail.com");
 		bean.setPhoneNumber("9876543210");
 		bean.setAddress("Indore");
 
@@ -56,9 +56,9 @@ public class CustomerModelTest {
 
 		CustomerBean bean = new CustomerBean();
 
-		bean.setId(1);
+		bean.setId(26);
 		bean.setCustomerName("Nitin Sharma Updated");
-		bean.setEmail("nitin@gmail.com");
+		bean.setEmail("niti@gmail.com");
 		bean.setPhoneNumber("9999999999");
 		bean.setAddress("Bhopal");
 
@@ -74,7 +74,7 @@ public class CustomerModelTest {
 
 	public static void testDelete() throws Exception {
 
-		model.delete(1);
+		model.delete(26);
 
 		System.out.println("Record Deleted");
 	}

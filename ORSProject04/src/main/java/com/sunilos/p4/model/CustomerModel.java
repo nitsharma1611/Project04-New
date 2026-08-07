@@ -133,7 +133,7 @@ public class CustomerModel extends BaseModel<CustomerBean>{
 				sql.append(" AND email like '" + bean.getEmail() + "%'");
 			}
 			if (bean.getPhoneNumber() != null && bean.getPhoneNumber().length() > 0) {
-				sql.append(" AND phoneNumber like '" + bean.getCustomerName() + "%'");
+				sql.append(" AND phoneNumber like '" + bean.getPhoneNumber() + "%'");
 			}
 			if (bean.getAddress() != null && bean.getAddress().length() > 0) {
 				sql.append(" AND address like '" + bean.getAddress() + "%'");

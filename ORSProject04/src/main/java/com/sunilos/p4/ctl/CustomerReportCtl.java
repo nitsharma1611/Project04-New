@@ -3,6 +3,7 @@ package com.sunilos.p4.ctl;
 import java.util.List;
 
 import com.sunilos.p4.bean.CustomerBean;
+import com.sunilos.p4.model.CustomerModel;
 
 import jakarta.servlet.annotation.WebServlet;
 
@@ -12,19 +13,21 @@ public class CustomerReportCtl extends BaseReportCtl<CustomerBean> {
 	@Override
 	public String getView() {
 		// TODO Auto-generated method stub
-		return null;
+		return ORSView.CUSTOMER_REPORT_VIEW;
 	}
 
 	@Override
 	public String getCompiledReportKey() {
 		// TODO Auto-generated method stub
-		return null;
+		return "CUSTOMER_LIST_COMPILED_REPORT";
 	}
 
 	@Override
 	public List<CustomerBean> getList() {
-		// TODO Auto-generated method stub
-		return null;
+		CustomerModel model=new CustomerModel();
+		List<CustomerBean> list=model.list();
+		
+		return list;
 	}
 
 }
