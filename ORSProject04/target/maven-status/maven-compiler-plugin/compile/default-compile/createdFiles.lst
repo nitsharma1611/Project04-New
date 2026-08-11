@@ -19,9 +19,11 @@ com\sunilos\p4\model\test\TestProductModel.class
 com\sunilos\p4\bean\MarksheetBean.class
 com\sunilos\p4\ctl\LoginCtl.class
 com\sunilos\p4\model\test\StudentModelTest.class
+com\sunilos\p4\ctl\VehicleReportCtl.class
 com\sunilos\p4\ctl\ChangePasswordCtl.class
 com\sunilos\p4\ctl\StudentCtl.class
 com\sunilos\p4\ctl\SmartLightReportCtl.class
+com\sunilos\p4\ctl\VehicleCtl.class
 com\sunilos\p4\model\CustomerModel.class
 com\sunilos\p4\ctl\CustomerListCtl.class
 com\sunilos\p4\ctl\EmployeeCtl.class
@@ -43,6 +45,7 @@ com\sunilos\p4\ctl\CustomerReportCtl.class
 com\sunilos\p4\model\AIRecommendationModel.class
 com\sunilos\p4\ctl\UserRegistrationCtl.class
 com\sunilos\p4\bean\EnergyConsumptionBean.class
+com\sunilos\p4\bean\VehicleBean.class
 com\sunilos\p4\ctl\SubjectListCtl.class
 com\sunilos\p4\ctl\FacultyCtl.class
 com\sunilos\p4\ctl\WaterMonitoringCtl.class
@@ -112,6 +115,7 @@ com\sunilos\p4\tag\MessageTag.class
 com\sunilos\p4\ctl\BaseReportCtl.class
 com\sunilos\p4\model\RoleModel.class
 com\sunilos\p4\model\test\UserModelTest.class
+com\sunilos\p4\model\VehicleModel.class
 com\sunilos\p4\ctl\CollegeListCtl.class
 com\sunilos\p4\ctl\SmartLightListCtl.class
 com\sunilos\p4\model\CollegeModel.class
@@ -134,6 +138,7 @@ com\sunilos\p4\ctl\FacultyListCtl.class
 com\sunilos\p4\model\test\SmartLightModelTest.class
 com\sunilos\p4\model\WeatherAlertModel.class
 com\sunilos\p4\ctl\DroneDeliveryCtl.class
+com\sunilos\p4\ctl\VehicleListCtl.class
 com\sunilos\p4\ctl\CourseCtl.class
 com\sunilos\p4\util\EmailMessage.class
 com\sunilos\p4\exception\DuplicateRecordException.class
@@ -148,6 +153,7 @@ com\sunilos\p4\ctl\FaceRecognitionCtl.class
 com\sunilos\p4\bean\CourseBean.class
 com\sunilos\p4\ctl\ExamCtl.class
 com\sunilos\p4\bean\VoiceCommandBean.class
+com\sunilos\p4\model\test\VehicleModelTest.class
 com\sunilos\p4\ctl\CourseListCtl.class
 com\sunilos\p4\util\HTMLUtility.class
 com\sunilos\p4\model\DroneDeliveryModel.class

@@ -43,7 +43,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					class="bi bi-file-earmark-word"></i> Print DOC
 				</a> <a href="<%=ORSView.CUSTOMER_CTL%>"
 					class="btn btn-light btn-sm text-primary fw-semibold"> <i
-					class="bi bi-plus-circle"></i> Add Smart Light
+					class="bi bi-plus-circle"></i> Add Customer
 				</a>
 
 			</div>
