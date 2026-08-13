@@ -401,6 +401,15 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							href="<%=ORSView.BOOK_LIST_CTL%>" target="_blank">
 								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Book List
 						</a></li>
+						
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DOCTOR_LIST_CTL%>" target="_blank">
+								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Doctor List
+						</a></li>
+						
+						
+						
+						
 </ul></li>
 
 

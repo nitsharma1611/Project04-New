@@ -1,5 +1,6 @@
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\EnergyConsumptionModel.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\CustomerReportCtl.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\BookCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\CollegeReportCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\ForgetPasswordCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\rest\UserRestCtl.java
@@ -10,13 +11,16 @@ E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\bean\WeatherAlert
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\AIRecommendationListCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\test\ExamModelTest.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\EnergyConsumptionListCtl.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\bean\BookBean.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\RoleCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\RoleReportCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\test\TestProductModel.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\tag\MessageTag.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\bean\DoctorBean.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\FaceRecognitionCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\UserCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\StudentCtl.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\DoctorCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\UserReportCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\FaceRecognitionModel.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\ExamReportCtl.java
@@ -43,9 +47,11 @@ E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\util\ServletUtili
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\FacultyCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\WelcomeCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\DroneDeliveryModel.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\test\BookModelTest.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\util\DataUtility.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\bean\MarksheetBean.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\WaterMonitoringReportCtl.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\DoctorListCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\MarksheetModel.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\DepartmentListCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\MarksheetMeritListCtl.java
@@ -65,6 +71,7 @@ E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\exception\Databas
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\VehicleModel.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\rest\RoleRestCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\CourseListCtl.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\test\DoctorModelTest.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\util\EmailMessage.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\PerformanceMonitorFilter.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\StudentReportCtl.java
@@ -83,7 +90,9 @@ E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\bean\VoiceCommand
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\test\QRScannerModelTest.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\bean\CustomerBean.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\DepartmentCtl.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\DoctorModel.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\util\EmailUtility.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\BookReportCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\SmartLightReportCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\UserRegistrationCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\test\SubjectModelTest.java
@@ -108,8 +117,10 @@ E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\VehicleListCt
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\QRScannerCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\test\FaceRecognitionModelTest.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\VehicleReportCtl.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\BookModel.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\MarksheetReportCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\SmartParkingCtl.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\BookListCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\ExamListCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\test\SmartLightModelTest.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\bean\ProductBean.java
@@ -125,6 +136,7 @@ E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\test\WaterM
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\LoginCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\DepartmentModel.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\bean\SubjectBean.java
+E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\DoctorReportCtl.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\ctl\FrontController.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\StudentModel.java
 E:\Project-WorkSpace\ORSProject04\src\main\java\com\sunilos\p4\model\test\CollegeModelTest.java

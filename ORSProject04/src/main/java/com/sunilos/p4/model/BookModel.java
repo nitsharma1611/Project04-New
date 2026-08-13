@@ -61,7 +61,7 @@ public class BookModel extends BaseModel<BookBean> {
 
 	}
 
-	private BookBean findByTitle(String title) {
+	public BookBean findByTitle(String title) {
 
 		return findByUniqueColumn("title", title);
 	}

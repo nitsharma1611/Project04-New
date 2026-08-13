@@ -5,6 +5,7 @@ com\sunilos\p4\tag\FormMessageTag.class
 com\sunilos\p4\util\MessageSource.class
 com\sunilos\p4\model\ProductModel.class
 com\sunilos\p4\bean\CustomerBean.class
+com\sunilos\p4\ctl\BookCtl.class
 com\sunilos\p4\util\DataUtility.class
 com\sunilos\p4\ctl\MyProfileCtl.class
 com\sunilos\p4\model\WaterMonitoringModel.class
@@ -17,6 +18,7 @@ com\sunilos\p4\bean\EmployeeBean.class
 com\sunilos\p4\model\BaseModel.class
 com\sunilos\p4\model\test\TestProductModel.class
 com\sunilos\p4\bean\MarksheetBean.class
+com\sunilos\p4\ctl\DoctorReportCtl.class
 com\sunilos\p4\ctl\LoginCtl.class
 com\sunilos\p4\model\test\StudentModelTest.class
 com\sunilos\p4\ctl\VehicleReportCtl.class
@@ -36,6 +38,7 @@ com\sunilos\p4\ctl\MarksheetListCtl.class
 com\sunilos\p4\model\test\EnergyConsumptionModelTest.class
 com\sunilos\p4\ctl\WaterMonitoringListCtl.class
 com\sunilos\p4\util\ServletUtility.class
+com\sunilos\p4\ctl\DoctorCtl.class
 com\sunilos\p4\ctl\StudentListCtl.class
 com\sunilos\p4\exception\ApplicationException.class
 com\sunilos\p4\ctl\QRScannerReportCtl.class
@@ -48,6 +51,7 @@ com\sunilos\p4\bean\EnergyConsumptionBean.class
 com\sunilos\p4\bean\VehicleBean.class
 com\sunilos\p4\ctl\SubjectListCtl.class
 com\sunilos\p4\ctl\FacultyCtl.class
+com\sunilos\p4\ctl\DoctorListCtl.class
 com\sunilos\p4\ctl\WaterMonitoringCtl.class
 com\sunilos\p4\ctl\StudentReportCtl.class
 com\sunilos\p4\ctl\BaseListCtl.class
@@ -59,6 +63,7 @@ com\sunilos\p4\ctl\ForgetPasswordCtl.class
 com\sunilos\p4\ctl\QRScannerCtl.class
 com\sunilos\p4\bean\DroneDeliveryBean.class
 com\sunilos\p4\ctl\ORSView.class
+com\sunilos\p4\ctl\BookListCtl.class
 com\sunilos\p4\model\test\WeatherAlertModelTest.class
 com\sunilos\p4\ctl\DepartmentListCtl.class
 com\sunilos\p4\model\test\MarksheetModelTest.class
@@ -129,10 +134,12 @@ com\sunilos\p4\model\test\FaceRecognitionModelTest.class
 com\sunilos\p4\model\VoiceCommandModel.class
 com\sunilos\p4\ctl\FacultyReportCtl.class
 com\sunilos\p4\ctl\SmartParkingReportCtl.class
+com\sunilos\p4\model\BookModel.class
 com\sunilos\p4\bean\SubjectBean.class
 com\sunilos\p4\ctl\QRScannerListCtl.class
 com\sunilos\p4\model\SmartLightModel.class
 com\sunilos\p4\bean\ORSResponse.class
+com\sunilos\p4\model\DoctorModel.class
 com\sunilos\p4\exception\DatabaseException.class
 com\sunilos\p4\ctl\FacultyListCtl.class
 com\sunilos\p4\model\test\SmartLightModelTest.class
@@ -145,6 +152,8 @@ com\sunilos\p4\exception\DuplicateRecordException.class
 com\sunilos\p4\bean\FaceRecognitionBean.class
 com\sunilos\p4\ctl\DroneDeliveryListCtl.class
 com\sunilos\p4\rest\BaseRestController.class
+com\sunilos\p4\model\test\BookModelTest.class
+com\sunilos\p4\bean\DoctorBean.class
 com\sunilos\p4\bean\BaseBean.class
 com\sunilos\p4\model\test\SmartParkingModelTest.class
 com\sunilos\p4\ctl\SubjectCtl.class
@@ -160,6 +169,7 @@ com\sunilos\p4\model\DroneDeliveryModel.class
 com\sunilos\p4\model\test\CourseModelTest.class
 com\sunilos\p4\ctl\SmartParkingCtl.class
 com\sunilos\p4\ctl\FrontController.class
+com\sunilos\p4\model\test\DoctorModelTest.class
 com\sunilos\p4\model\test\CustomerModelTest.class
 com\sunilos\p4\ctl\ExamReportCtl.class
 com\sunilos\p4\ctl\MarksheetReportCtl.class
@@ -167,6 +177,7 @@ com\sunilos\p4\model\test\CollegeModelTest.class
 com\sunilos\p4\model\test\DroneDeliveryModelTest.class
 com\sunilos\p4\ctl\SmartLightCtl.class
 com\sunilos\p4\bean\CollegeBean.class
+com\sunilos\p4\ctl\BookReportCtl.class
 com\sunilos\p4\model\test\ExamModelTest.class
 com\sunilos\p4\bean\QRScannerBean.class
 com\sunilos\p4\bean\ExamBean.class
@@ -175,6 +186,7 @@ com\sunilos\p4\ctl\RoleReportCtl.class
 com\sunilos\p4\ctl\ProductCtl.class
 com\sunilos\p4\tag\FormSelect.class
 com\sunilos\p4\ctl\WelcomeCtl.class
+com\sunilos\p4\bean\BookBean.class
 com\sunilos\p4\bean\FacultyBean.class
 com\sunilos\p4\model\FacultyModel.class
 com\sunilos\p4\ctl\VoiceCommandCtl.class

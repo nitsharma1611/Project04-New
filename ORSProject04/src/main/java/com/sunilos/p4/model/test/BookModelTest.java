@@ -14,7 +14,7 @@ public class BookModelTest {
 	public static void main(String[] args) throws Exception {
 
 		// testNextPK();
-		// testAdd();
+		 testAdd();
 		// testUpdate();
 		// testDelete();
 	// testFindByPK();
