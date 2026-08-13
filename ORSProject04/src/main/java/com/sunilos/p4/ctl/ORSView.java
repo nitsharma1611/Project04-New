@@ -77,8 +77,9 @@ public interface ORSView {
 	public String BOOK_LIST_VIEW = PAGE_FOLDER + "/BookListView.jsp";
 	public String DOCTOR_VIEW = PAGE_FOLDER + "/DoctorView.jsp";
 	public String DOCTOR_LIST_VIEW = PAGE_FOLDER + "/DoctorListView.jsp";
+	public String PATIENT_VIEW = PAGE_FOLDER + "/PatientView.jsp";
+	public String PATIENT_LIST_VIEW = PAGE_FOLDER + "/PatientListView.jsp";
 
-	
 	// ============================================================
 
 	public String ERROR_CTL = "/ctl/MarksheetCtl";
@@ -143,7 +144,8 @@ public interface ORSView {
 	
 	public String DOCTOR_CTL = APP_CONTEXT + "/ctl/DoctorCtl";
 	public String DOCTOR_LIST_CTL = APP_CONTEXT + "/ctl/DoctorListCtl";
-	
+	public String PATIENT_CTL = APP_CONTEXT + "/ctl/PatientCtl";
+	public String PATIENT_LIST_CTL = APP_CONTEXT + "/ctl/PatientListCtl";
 	
 	
 	
@@ -171,7 +173,7 @@ public interface ORSView {
 	public String BOOK_REPORT_CTL = APP_CONTEXT + "/ctl/BookReportCtl";
 	public String DOCTOR_REPORT_CTL = APP_CONTEXT + "/ctl/DoctorReportCtl";
 	
-	
+	public String PATIENT_REPORT_CTL = APP_CONTEXT + "/ctl/PatientReportCtl";
 	
 	
 	// ============================================================
@@ -196,5 +198,5 @@ public interface ORSView {
 	public String VEHICLE_REPORT_VIEW = "/reports/VehicleListReport.jrxml";
 	public String BOOK_REPORT_VIEW = "/reports/BookListReport.jrxml";
 	public String DOCTOR_REPORT_VIEW = "/reports/DoctorListReport.jrxml";
-
+	public String PATIENT_REPORT_VIEW = "/reports/PatientListReport.jrxml";
 }
