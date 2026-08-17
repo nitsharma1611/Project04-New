@@ -65,24 +65,13 @@ public interface ORSView {
 	public String ENERGY_CONSUMPTION_LIST_VIEW = PAGE_FOLDER + "/EnergyConsumptionListView.jsp";
 	public String AI_RECOMMENDATION_VIEW = PAGE_FOLDER + "/AIRecommendationView.jsp";
 	public String AI_RECOMMENDATION_LIST_VIEW = PAGE_FOLDER + "/AIRecommendationListView.jsp";
-	public String DEPARTMENT_VIEW = PAGE_FOLDER + "/DepartmentView.jsp";
-	public String DEPARTMENT_LIST_VIEW = PAGE_FOLDER + "/DepartmentListView.jsp";
-	public String EXAM_VIEW = PAGE_FOLDER + "/ExamView.jsp";
-	public String EXAM_LIST_VIEW = PAGE_FOLDER + "/ExamListView.jsp";
-	public String CUSTOMER_VIEW = PAGE_FOLDER + "/CustomerView.jsp";
-	public String CUSTOMER_LIST_VIEW = PAGE_FOLDER + "/CustomerListView.jsp";
-	public String VEHICLE_VIEW = PAGE_FOLDER + "/VehicleView.jsp";
-	public String VEHICLE_LIST_VIEW = PAGE_FOLDER + "/VehicleListView.jsp";
-	public String BOOK_VIEW = PAGE_FOLDER + "/BookView.jsp";
-	public String BOOK_LIST_VIEW = PAGE_FOLDER + "/BookListView.jsp";
-	public String DOCTOR_VIEW = PAGE_FOLDER + "/DoctorView.jsp";
-	public String DOCTOR_LIST_VIEW = PAGE_FOLDER + "/DoctorListView.jsp";
-	public String PATIENT_VIEW = PAGE_FOLDER + "/PatientView.jsp";
-	public String PATIENT_LIST_VIEW = PAGE_FOLDER + "/PatientListView.jsp";
-
-	// ============================================================
+	
+	
+	
+	
 
 	public String ERROR_CTL = "/ctl/MarksheetCtl";
+
 	public String MARKSHEET_CTL = APP_CONTEXT + "/ctl/MarksheetCtl";
 	public String MARKSHEET_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetListCtl";
 	public String USER_CTL = APP_CONTEXT + "/ctl/UserCtl";
@@ -131,27 +120,12 @@ public interface ORSView {
 	public String ENERGY_CONSUMPTION_LIST_CTL = APP_CONTEXT + "/ctl/EnergyConsumptionListCtl";
 	public String AI_RECOMMENDATION_CTL = APP_CONTEXT + "/ctl/AIRecommendationCtl";
 	public String AI_RECOMMENDATION_LIST_CTL = APP_CONTEXT + "/ctl/AIRecommendationListCtl";
-	public String DEPARTMENT_CTL = APP_CONTEXT + "/ctl/DepartmentCtl";
-	public String DEPARTMENT_LIST_CTL = APP_CONTEXT + "/ctl/DepartmentListCtl";
-	public String EXAM_CTL = APP_CONTEXT + "/ctl/ExamCtl";
-	public String EXAM_LIST_CTL = APP_CONTEXT + "/ctl/ExamListCtl";
-	public String CUSTOMER_CTL = APP_CONTEXT + "/ctl/CustomerCtl";
-	public String CUSTOMER_LIST_CTL = APP_CONTEXT + "/ctl/CustomerListCtl";
-	public String VEHICLE_CTL = APP_CONTEXT + "/ctl/VehicleCtl";
-	public String VEHICLE_LIST_CTL = APP_CONTEXT + "/ctl/VehicleListCtl";
-	public String BOOK_CTL = APP_CONTEXT + "/ctl/BookCtl";
-	public String BOOK_LIST_CTL = APP_CONTEXT + "/ctl/BookListCtl";
-	
-	public String DOCTOR_CTL = APP_CONTEXT + "/ctl/DoctorCtl";
-	public String DOCTOR_LIST_CTL = APP_CONTEXT + "/ctl/DoctorListCtl";
-	public String PATIENT_CTL = APP_CONTEXT + "/ctl/PatientCtl";
-	public String PATIENT_LIST_CTL = APP_CONTEXT + "/ctl/PatientListCtl";
 	
 	
 	
 	
-	// ============================================================
-
+	
+	
 	public String SMART_PARKING_REPORT_CTL = APP_CONTEXT + "/ctl/SmartParkingReportCtl";
 	public String STUDENT_REPORT_CTL = APP_CONTEXT + "/ctl/StudentReportCtl";
 	public String COLLEGE_REPORT_CTL = APP_CONTEXT + "/ctl/CollegeReportCtl";
@@ -166,17 +140,10 @@ public interface ORSView {
 	public String SMART_LIGHT_REPORT_CTL = APP_CONTEXT + "/ctl/SmartLightReportCtl";
 	public String ENERGY_CONSUMPTION_REPORT_CTL = APP_CONTEXT + "/ctl/EnergyConsumptionReportCtl";
 	public String AI_RECOMMENDATION_REPORT_CTL = APP_CONTEXT + "/ctl/AIRecommendationReportCtl";
-	public String DEPARTMENT_REPORT_CTL = APP_CONTEXT + "/ctl/DepartmentReportCtl";
-	public String EXAM_REPORT_CTL = APP_CONTEXT + "/ctl/ExamReportCtl";
-	public String CUSTOMER_REPORT_CTL = APP_CONTEXT + "/ctl/CustomerReportCtl";
-	public String VEHICLE_REPORT_CTL = APP_CONTEXT + "/ctl/VehicleReportCtl";
-	public String BOOK_REPORT_CTL = APP_CONTEXT + "/ctl/BookReportCtl";
-	public String DOCTOR_REPORT_CTL = APP_CONTEXT + "/ctl/DoctorReportCtl";
-	
-	public String PATIENT_REPORT_CTL = APP_CONTEXT + "/ctl/PatientReportCtl";
 	
 	
-	// ============================================================
+	
+	
 
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
 	public String STUDENT_REPORT_VIEW = "/reports/StudentListReport.jrxml";
@@ -192,11 +159,4 @@ public interface ORSView {
 	public String SMART_LIGHT_REPORT_VIEW = "/reports/SmartLightListReport.jrxml";
 	public String ENERGY_CONSUMPTION_REPORT_VIEW = "/reports/EnergyConsumptionListReport.jrxml";
 	public String AI_RECOMMENDATION_REPORT_VIEW = "/reports/AIRecommendationListReport.jrxml";
-	public String DEPARTMENT_REPORT_VIEW = "/reports/DepartmentListReport.jrxml";
-	public String EXAM_REPORT_VIEW = "/reports/ExamListReport.jrxml";
-	public String CUSTOMER_REPORT_VIEW = "/reports/CustomerListReport.jrxml";
-	public String VEHICLE_REPORT_VIEW = "/reports/VehicleListReport.jrxml";
-	public String BOOK_REPORT_VIEW = "/reports/BookListReport.jrxml";
-	public String DOCTOR_REPORT_VIEW = "/reports/DoctorListReport.jrxml";
-	public String PATIENT_REPORT_VIEW = "/reports/PatientListReport.jrxml";
 }

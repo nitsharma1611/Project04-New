@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LibraryListReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5e3ba4e7-aaf3-430c-ae1a-9af077c44375">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyAdapter "/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id,libraryName,address,totalBooks,contactNo FROM p04.st_library]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_library"/>
+	</field>
+	<field name="libraryName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="libraryName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_library"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_library"/>
+	</field>
+	<field name="totalBooks" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="totalBooks"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_library"/>
+	</field>
+	<field name="contactNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="contactNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_library"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="libraryName">
+		<groupExpression><![CDATA[$F{libraryName}]]></groupExpression>
+	</group>
+	<group name="address">
+		<groupExpression><![CDATA[$F{address}]]></groupExpression>
+	</group>
+	<group name="totalBooks">
+		<groupExpression><![CDATA[$F{totalBooks}]]></groupExpression>
+	</group>
+	<group name="contactNo">
+		<groupExpression><![CDATA[$F{contactNo}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="40" width="209" height="30" uuid="e4166f69-5de7-4135-ad69-357448537b17"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Library List Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="bee61db3-9af2-4503-9154-b82176cec006">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c0229eb4-87ea-4408-b7b8-9fa2e2a699d9"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="b7c66ae0-11ce-4044-b9ff-7a64c913a939">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0aa79eb0-b824-4b52-ab12-bcdfc38b63ee"/>
+				</reportElement>
+				<text><![CDATA[libraryName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="31f19a14-142a-4095-892e-d81c5d739468">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ad6dc16-99ef-47d1-a49d-900dc68fa19c"/>
+				</reportElement>
+				<text><![CDATA[address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="834dec1c-eb1b-4a17-a29f-b93a88c3e7a7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a1e32a2-1906-4204-b4f1-f85d34d94339"/>
+				</reportElement>
+				<text><![CDATA[totalBooks]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="a1513e2b-60e6-4ed0-88a0-dee7c25d0f89">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cfbf2084-7f42-4d69-adb6-a71af745913b"/>
+				</reportElement>
+				<text><![CDATA[contactNo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="e831b07c-0baf-46c5-98e4-f0afe0e8f568">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c0229eb4-87ea-4408-b7b8-9fa2e2a699d9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="30" uuid="8a20e16d-b0ea-463a-959a-8e296e45bbc4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0aa79eb0-b824-4b52-ab12-bcdfc38b63ee"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{libraryName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="a744f445-6221-4b1c-bca0-2b073f2b1316">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ad6dc16-99ef-47d1-a49d-900dc68fa19c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="101c2921-45db-4992-bc0c-8d7c24ec05d4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a1e32a2-1906-4204-b4f1-f85d34d94339"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{totalBooks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="a2e73c86-f2f2-4f27-89af-9f5a802c2f97">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cfbf2084-7f42-4d69-adb6-a71af745913b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{contactNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -328,89 +328,34 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								Alert
 						</a></li>
 
-						
+						<li><hr class="dropdown-divider border-secondary"></li>
 
-						
+						<!-- People -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-warning small">
+								<i class="bi bi-people me-1"></i> People
+							</h6>
+						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.VOICE_COMMAND_LIST_CTL%>" target="_blank"> <i
 								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Voice Command
 						</a></li>
-						
-						<li><hr class="dropdown-divider border-secondary"></li>
 						<li><a class="dropdown-item"
-							href="<%=ORSView.QR_SCANNER_LIST_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> QR Scanner
-								List
-						</a></li>
-						
-						<li><a class="dropdown-item"
-							href="<%=ORSView.WATER_MONITORING_LIST_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Water Monitoring
+							href="<%=ORSView.FACULTY_REPORT_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Faculty
 								List
 						</a></li>
 						<li><a class="dropdown-item"
-							href="<%=ORSView.SMART_LIGHT_LIST_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Smart Light List
+							href="<%=ORSView.USER_REPORT_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> User List
 						</a></li>
 						<li><a class="dropdown-item"
-							href="<%=ORSView.ENERGY_CONSUMPTION_LIST_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Energy Consumption List
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.AI_RECOMMENDATION_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> AI Recommendation
+							href="<%=ORSView.ROLE_REPORT_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Role List
 						</a></li>
 					</ul></li>
 
-	<!--Daily Module Second  -->
 
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle px-3 py-3" href="#"
-					data-bs-toggle="dropdown" aria-expanded="false"> <i
-						class="bi bi-file-earmark-bar-graph me-1"></i> Daily Module Two
-				</a>
-					<ul
-						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
-						style="min-width: 230px; background: #1a2e4a;">
-
-						<!-- Academics -->
-						<li>
-							<h6 class="dropdown-header text-uppercase text-warning small">
-								<i class="bi bi-mortarboard me-1"></i> Academics
-							</h6>
-						</li>
-<li><a class="dropdown-item"
-							href="<%=ORSView.DEPARTMENT_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Department List
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.EXAM_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Exam List
-						</a></li>
-									<li><a class="dropdown-item"
-							href="<%=ORSView.CUSTOMER_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Customer List
-						</a></li>
-					
-						<li><a class="dropdown-item"
-							href="<%=ORSView.VEHICLE_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Vehicle List
-						</a></li>
-						<li><hr class="dropdown-divider border-secondary"></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.BOOK_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Book List
-						</a></li>
-						
-						<li><a class="dropdown-item"
-							href="<%=ORSView.DOCTOR_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Doctor List
-						</a></li>
-						
-						
-						
-						
-</ul></li>
 
 
 				<%

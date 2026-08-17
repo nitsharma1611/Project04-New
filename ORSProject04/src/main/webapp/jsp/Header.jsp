@@ -379,41 +379,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-mortarboard me-1"></i> Academics
 							</h6>
 						</li>
-<li><a class="dropdown-item"
-							href="<%=ORSView.DEPARTMENT_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Department List
-						</a></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.EXAM_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Exam List
-						</a></li>
-									<li><a class="dropdown-item"
-							href="<%=ORSView.CUSTOMER_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Customer List
-						</a></li>
-					
-						<li><a class="dropdown-item"
-							href="<%=ORSView.VEHICLE_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Vehicle List
-						</a></li>
-						<li><hr class="dropdown-divider border-secondary"></li>
-						<li><a class="dropdown-item"
-							href="<%=ORSView.BOOK_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Book List
-						</a></li>
 						
-						<li><a class="dropdown-item"
-							href="<%=ORSView.DOCTOR_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Doctor List
-						</a></li>
-						
-						<li><a class="dropdown-item"
-							href="<%=ORSView.PATIENT_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Patient List
-						</a></li>
-						
-						
-</ul></li>
+											</ul></li>
 
 
 				<%

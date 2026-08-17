@@ -1,7 +1,6 @@
 package com.sunilos.p4.ctl;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -159,15 +158,6 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 		} catch (DuplicateRecordException e) {
 			ServletUtility.setBean(bean, request);
 			ServletUtility.setErrorMessage(e.getMessage(), request);
-			ServletUtility.forwardPage(getView(), request, response);
-		} catch (ApplicationException e) {
-			e.printStackTrace();
-			System.out.println(e.getMessage() + " ============== database is down ===================");
-			ServletUtility.setPageNo(1, request);
-			ServletUtility.setPageSize(10, request);
-			ServletUtility.setList(new ArrayList<BaseBean>(), request);
-			request.setAttribute("nextList", new ArrayList<BaseBean>());
-			ServletUtility.setErrorMessage("database service is down", request);
 			ServletUtility.forwardPage(getView(), request, response);
 		}
 
