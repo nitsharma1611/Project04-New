@@ -44,7 +44,7 @@ public class ProductCtl extends BaseCtl<ProductBean, ProductModel> {
 	protected ProductBean populateBean(HttpServletRequest request) {
 
 		ProductBean bean = new ProductBean();
-
+		bean.setId(DataUtility.getLong(request.getParameter("id")));
 		bean.setProductName(DataUtility.getString(request.getParameter("productName")));
 		bean.setProductCategory(DataUtility.getString(request.getParameter("productCategory")));
 		bean.setOrderDate(DataUtility.getDate(request.getParameter("orderDate")));

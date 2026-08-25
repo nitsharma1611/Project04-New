@@ -328,41 +328,62 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								Alert
 						</a></li>
 
-						
 
-						
+
+
 						<li><a class="dropdown-item"
 							href="<%=ORSView.VOICE_COMMAND_LIST_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Voice Command
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Voice
+								Command
 						</a></li>
-						
+
 						<li><hr class="dropdown-divider border-secondary"></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.QR_SCANNER_LIST_CTL%>" target="_blank"> <i
 								class="bi bi-file-earmark-pdf me-2 text-warning"></i> QR Scanner
 								List
 						</a></li>
-						
+
 						<li><a class="dropdown-item"
-							href="<%=ORSView.WATER_MONITORING_LIST_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Water Monitoring
-								List
+							href="<%=ORSView.WATER_MONITORING_LIST_CTL%>" target="_blank">
+								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Water
+								Monitoring List
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.SMART_LIGHT_LIST_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Smart Light List
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Smart
+								Light List
 						</a></li>
 						<li><a class="dropdown-item"
-							href="<%=ORSView.ENERGY_CONSUMPTION_LIST_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Energy Consumption List
+							href="<%=ORSView.ENERGY_CONSUMPTION_LIST_CTL%>" target="_blank">
+								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> Energy
+								Consumption List
 						</a></li>
+						<li><hr class="dropdown-divider border-secondary"></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.AI_RECOMMENDATION_LIST_CTL%>" target="_blank">
-								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> AI Recommendation
+								<i class="bi bi-file-earmark-pdf me-2 text-warning"></i> AI
+								Recommendation
 						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DEPARTMENT_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Department
+								List
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.EXAM_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Exam List
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.CUSTOMER_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Customer
+								List
+						</a></li>
+
+						
 					</ul></li>
 
-	<!--Daily Module Second  -->
+				<!--Daily Module Second  -->
 
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
@@ -379,8 +400,72 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-mortarboard me-1"></i> Academics
 							</h6>
 						</li>
+												<li><a class="dropdown-item"
+							href="<%=ORSView.VEHICLE_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Vehicle
+								List
+						</a></li>
 						
-											</ul></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.BOOK_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Book List
+						</a></li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DOCTOR_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Doctor
+								List
+						</a></li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.PATIENT_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Patient
+								List
+						</a></li>
+
+<li><hr class="dropdown-divider border-secondary"></li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.LIBRARY_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Library
+								List
+						</a></li>
+						
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.BANK_ACCOUNT_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Bank
+								Account List
+						</a></li>
+
+
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.VENDOR_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Vendor
+								List
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.SERVICE_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Service
+								List
+						</a></li>
+<li><hr class="dropdown-divider border-secondary"></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.EMPLOYEE_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Employee
+								List
+						</a></li>
+
+
+
+
+
+
+
+
+
+					</ul></li>
 
 
 				<%

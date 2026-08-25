@@ -92,7 +92,7 @@ public abstract class BaseBean implements Serializable, DropdownListBean, Compar
 
 	public void setResultset(ResultSet rs) {
 		try {
-			this.setId(rs.getLong("ID"));
+			this.setId(rs.getLong("id"));
 			this.setCreatedBy(rs.getString("CREATED_BY"));
 			this.setModifiedBy(rs.getString("MODIFIED_BY"));
 			this.setCreatedDatetime(rs.getTimestamp("CREATED_DATETIME"));

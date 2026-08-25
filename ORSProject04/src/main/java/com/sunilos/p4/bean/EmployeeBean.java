@@ -7,9 +7,11 @@ import java.util.Date;
 public class EmployeeBean extends BaseBean {
 
 	private String name;
-	private int salary;
-	private String company;
-	private Date dob;
+	private Double salary;
+	private String designation;
+	private Date joiningDate;
+
+	
 
 	public String getName() {
 		return name;
@@ -19,38 +21,40 @@ public class EmployeeBean extends BaseBean {
 		this.name = name;
 	}
 
-	public int getSalary() {
+	public Double getSalary() {
 		return salary;
 	}
 
-	public void setSalary(int salary) {
+	public void setSalary(Double salary) {
 		this.salary = salary;
 	}
 
-	public String getCompany() {
-		return company;
+	public String getDesignation() {
+		return designation;
 	}
 
-	public void setCompany(String company) {
-		this.company = company;
+	public void setDesignation(String designation) {
+		this.designation = designation;
 	}
 
-	public Date getDob() {
-		return dob;
+	public Date getJoiningDate() {
+		return joiningDate;
 	}
 
-	public void setDob(Date dob) {
-		this.dob = dob;
+	public void setJoiningDate(Date joiningDate) {
+		this.joiningDate = joiningDate;
 	}
 
+	
 	@Override
 	public void setResultset(ResultSet rs) {
-		super.setResultset(rs);
+		
 		try {
-			this.setName(rs.getString("NAME"));
-			this.setSalary(rs.getInt("SALARY"));
-			this.setCompany(rs.getString("COMPANY"));
-			this.setDob(rs.getDate("DOB"));
+			super.setResultset(rs);
+			this.setName(rs.getString(2));
+			this.setSalary(rs.getDouble(3));
+			this.setDesignation(rs.getString(4));;
+			this.setJoiningDate(rs.getDate(5));;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -67,5 +71,4 @@ public class EmployeeBean extends BaseBean {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }

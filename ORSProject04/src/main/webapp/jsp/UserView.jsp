@@ -139,8 +139,8 @@ genderMap.put("F", "Female");
 						<%=HTMLUtility.getList("roleId", String.valueOf(bean.getRoleId()), roleList)%>
 					</div>
 				</div>
-
-				<div class="mb-4">
+<div
+				 class="mb-4">
 					<label class="form-label fw-semibold"> Date of Birth
 						(mm/dd/yyyy) </label>
 

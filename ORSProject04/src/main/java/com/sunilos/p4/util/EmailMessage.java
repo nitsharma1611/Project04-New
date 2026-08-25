@@ -40,6 +40,9 @@ public class EmailMessage {
 	 * Contains message
 	 */
 	private String message = null;
+	private String attachment = null;
+
+	
 
 	/**
 	 * Type of message whether it is Html or text, default is Text
@@ -105,5 +108,11 @@ public class EmailMessage {
 	public void setMessageType(int messageType) {
 		this.messageType = messageType;
 	}
+	public String getAttachment() {
+	    return attachment;
+	}
 
+	public void setAttachment(String attachment) {
+	    this.attachment = attachment;
+	}
 }

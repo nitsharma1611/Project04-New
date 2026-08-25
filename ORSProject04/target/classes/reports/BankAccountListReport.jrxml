@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BankAccountListReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e81e5ef1-9782-4fd1-97b2-4f3d940e3b0e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyAdapter "/>
+	<queryString language="SQL">
+		<![CDATA[SELECT id, accountNumber,accountHolderName,accountType,balance,branchName FROM p04.st_bank_account]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_bank_account"/>
+	</field>
+	<field name="accountNumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="accountNumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_bank_account"/>
+	</field>
+	<field name="accountHolderName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="accountHolderName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_bank_account"/>
+	</field>
+	<field name="accountType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="accountType"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_bank_account"/>
+	</field>
+	<field name="balance" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="balance"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_bank_account"/>
+	</field>
+	<field name="branchName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="branchName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_bank_account"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="accountNumber">
+		<groupExpression><![CDATA[$F{accountNumber}]]></groupExpression>
+	</group>
+	<group name="accountHolderName">
+		<groupExpression><![CDATA[$F{accountHolderName}]]></groupExpression>
+	</group>
+	<group name="accountType">
+		<groupExpression><![CDATA[$F{accountType}]]></groupExpression>
+	</group>
+	<group name="balance">
+		<groupExpression><![CDATA[$F{balance}]]></groupExpression>
+	</group>
+	<group name="branchName">
+		<groupExpression><![CDATA[$F{branchName}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="40" width="239" height="30" uuid="9db98839-5b2f-4ad4-bbd3-94cab1127be2"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Bank AccountList]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="60" height="30" uuid="b8f055d2-b5b9-4715-ac52-ce9d5eb41567">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2143602f-3316-4330-b543-b63ac2756d1f"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="90" height="30" uuid="b41701fa-27ba-4c25-98bc-58f0b57478a5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="827786ca-a8f3-4273-b642-10931e6e66d4"/>
+				</reportElement>
+				<text><![CDATA[accountNumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="0" width="90" height="30" uuid="afcfa6de-dd88-449e-9f28-3a9bacc0ac22">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="741126dc-ac2c-452e-b400-08af4cee1164"/>
+				</reportElement>
+				<text><![CDATA[accountHolderName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="92" height="30" uuid="0771f3d9-6c37-4a78-8188-81a1a478b99c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1a56ab1b-9b42-4d56-a757-28df3e4c15ee"/>
+				</reportElement>
+				<text><![CDATA[accountType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="0" width="92" height="30" uuid="6aec32ea-e799-4279-86d4-ec57f1f61259">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19935cb9-600a-439e-88b6-97f317e98123"/>
+				</reportElement>
+				<text><![CDATA[balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="0" width="92" height="30" uuid="b5c4f80e-bdc8-4502-97be-5be0139f1683">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="85641167-b346-4d0c-a292-b503e10a6482"/>
+				</reportElement>
+				<text><![CDATA[branchName]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="0" width="80" height="30" uuid="75f81fae-9313-4b27-aa48-e1e9725732db">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2143602f-3316-4330-b543-b63ac2756d1f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="107" height="30" uuid="9c80d06a-484f-407d-a4f6-9e298099ecf5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="827786ca-a8f3-4273-b642-10931e6e66d4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{accountNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="100" height="30" uuid="1495ca1b-35ef-48b6-a699-47aefcd14991">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="741126dc-ac2c-452e-b400-08af4cee1164"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{accountHolderName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="92" height="30" uuid="7e44de4a-9d47-4766-853a-bc321779803f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1a56ab1b-9b42-4d56-a757-28df3e4c15ee"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{accountType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="92" height="30" uuid="a1f1daad-5e2f-43ed-8bbc-1cd1042532b2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19935cb9-600a-439e-88b6-97f317e98123"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="0" width="92" height="30" uuid="9915154c-f4a2-4cc6-b822-f5800471762e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="85641167-b346-4d0c-a292-b503e10a6482"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{branchName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,17 +1,20 @@
 package com.sunilos.p4.util;
 
-
 import java.util.Properties;
 import java.util.ResourceBundle;
 
+import com.sunilos.p4.exception.ApplicationException;
+
+import jakarta.mail.BodyPart;
 import jakarta.mail.Message;
+import jakarta.mail.Multipart;
 import jakarta.mail.PasswordAuthentication;
 import jakarta.mail.Session;
 import jakarta.mail.Transport;
 import jakarta.mail.internet.InternetAddress;
+import jakarta.mail.internet.MimeBodyPart;
 import jakarta.mail.internet.MimeMessage;
-
-import com.sunilos.p4.exception.ApplicationException;
+import jakarta.mail.internet.MimeMultipart;
 
 /**
  * Email Utility provides Email Services
@@ -27,8 +30,7 @@ public class EmailUtility {
 	/**
 	 * Create Resource Bundle to read properties file
 	 */
-	static ResourceBundle rb = ResourceBundle
-			.getBundle("com.sunilos.p4.bundle.system");
+	static ResourceBundle rb = ResourceBundle.getBundle("com.sunilos.p4.bundle.system");
 
 	/**
 	 * Email Server
@@ -77,23 +79,19 @@ public class EmailUtility {
 	/**
 	 * Sends an Email
 	 * 
-	 * @param emailMessageDTO
-	 *            : Email message
+	 * @param emailMessageDTO : Email message
 	 * @throws ApplicationException
 	 */
-	public static void sendMail(EmailMessage emailMessageDTO)
-			throws ApplicationException {
+	public static void sendMail(EmailMessage emailMessageDTO) throws ApplicationException {
 
 		try {
 
 			// Connection to Mail Server
-			Session session = Session.getDefaultInstance(props,
-					new jakarta.mail.Authenticator() {
-						protected PasswordAuthentication getPasswordAuthentication() {
-							return new PasswordAuthentication(emailFromAddress,
-									emailPassword);
-						}
-					});
+			Session session = Session.getDefaultInstance(props, new jakarta.mail.Authenticator() {
+				protected PasswordAuthentication getPasswordAuthentication() {
+					return new PasswordAuthentication(emailFromAddress, emailPassword);
+				}
+			});
 
 			// Make debug mode true to display debug messages at console
 			session.setDebug(true);
@@ -158,14 +156,40 @@ public class EmailUtility {
 			msg.setSubject(emailMessageDTO.getSubject());
 
 			// Set message MIME type
-			switch (emailMessageDTO.getMessageType()) {
-			case EmailMessage.HTML_MSG:
-				msg.setContent(emailMessageDTO.getMessage(), "text/html");
-				break;
-			case EmailMessage.TEXT_MSG:
-				msg.setContent(emailMessageDTO.getMessage(), "text/plain");
-				break;
+			if (emailMessageDTO.getAttachment() != null && !emailMessageDTO.getAttachment().isEmpty()) {
 
+				Multipart multipart = new MimeMultipart();
+
+				// Email body
+				BodyPart messageBodyPart = new MimeBodyPart();
+
+				if (emailMessageDTO.getMessageType() == EmailMessage.HTML_MSG) {
+					messageBodyPart.setContent(emailMessageDTO.getMessage(), "text/html; charset=UTF-8");
+				} else {
+					messageBodyPart.setText(emailMessageDTO.getMessage());
+				}
+
+				multipart.addBodyPart(messageBodyPart);
+
+				// Attachment
+				MimeBodyPart attachmentPart = new MimeBodyPart();
+				attachmentPart.attachFile(emailMessageDTO.getAttachment());
+
+				multipart.addBodyPart(attachmentPart);
+
+				msg.setContent(multipart);
+
+			} else {
+
+				// Normal mail without attachment
+				if (emailMessageDTO.getMessageType() == EmailMessage.HTML_MSG) {
+
+					msg.setContent(emailMessageDTO.getMessage(), "text/html; charset=UTF-8");
+
+				} else {
+
+					msg.setContent(emailMessageDTO.getMessage(), "text/plain; charset=UTF-8");
+				}
 			}
 
 			// Send the mail

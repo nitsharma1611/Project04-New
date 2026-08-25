@@ -16,10 +16,6 @@ import com.sunilos.p4.util.DataValidator;
 import com.sunilos.p4.util.MessageSource;
 
 /**
- * Main Controller performs session checking and logging operations before
- * calling any application controller. It prevents any user to access
- * application without login.
- * 
  * 
  * @author Rays EdTech
  * @version 1.0

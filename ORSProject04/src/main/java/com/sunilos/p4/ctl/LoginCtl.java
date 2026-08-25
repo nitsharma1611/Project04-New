@@ -132,7 +132,7 @@ public class LoginCtl extends BaseCtl<UserBean, UserModel> {
 
 		HttpSession session = request.getSession(true);
 		session.setAttribute("user", bean);
-
+		System.out.println("Session Status in LoginCtl: "+session);
 		long rollId = bean.getRoleId();
 		RoleModel role = new RoleModel();
 		RoleBean rolebean = role.findByPK(rollId);
