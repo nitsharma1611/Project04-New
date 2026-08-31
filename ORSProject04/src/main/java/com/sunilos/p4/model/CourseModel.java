@@ -135,7 +135,7 @@ public class CourseModel extends BaseModel<CourseBean> {
 
     @Override
     public String getTable() {
-        return "ST_COURSE";
+        return "st_course";
     }
 
     @Override

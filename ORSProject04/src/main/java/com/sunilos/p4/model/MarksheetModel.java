@@ -212,7 +212,7 @@ public class MarksheetModel extends BaseModel<MarksheetBean> {
 
 	@Override
 	public String getTable() {
-		return "ST_MARKSHEET";
+		return "st_marksheet";
 	}
 
 	@Override

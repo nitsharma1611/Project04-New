@@ -142,7 +142,7 @@ public class CollegeModel extends BaseModel<CollegeBean> {
 
 	@Override
 	public String getTable() {
-		return "ST_COLLEGE";
+		return "st_college";
 	}
 
 	@Override

@@ -134,7 +134,7 @@ public class FacultyModel extends BaseModel<FacultyBean> {
     }
 
     @Override
-    public String getTable() { return "ST_FACULTY"; }
+    public String getTable() { return "st_faculty"; }
 
     @Override
     public FacultyBean getBean() { return new FacultyBean(); }

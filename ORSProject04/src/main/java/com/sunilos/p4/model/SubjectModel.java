@@ -132,7 +132,7 @@ public class SubjectModel extends BaseModel<SubjectBean> {
 
     @Override
     public String getTable() {
-        return "ST_SUBJECT";
+        return "st_subject";
     }
 
     @Override
