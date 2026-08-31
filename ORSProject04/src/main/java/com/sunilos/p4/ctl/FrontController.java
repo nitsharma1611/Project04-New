@@ -41,7 +41,7 @@ public class FrontController implements Filter {
 		HttpServletResponse response = (HttpServletResponse) resp;
 
 		HttpSession session = request.getSession(true);
-System.out.println("Session Status in FrontController: "+session);
+
 		if (session.getAttribute("user") == null) {
 			ServletUtility.setErrorMessage("OOPS!! your session has been expired, please relogin", request);
 			String queryParam = "?" + BaseCtl.MSG_ERROR + "=OOPS!! your session has been expired, please relogin";

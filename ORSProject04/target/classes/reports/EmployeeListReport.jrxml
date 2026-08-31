@@ -86,8 +86,8 @@
 				<text><![CDATA[designation]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="444" y="0" width="111" height="30" uuid="304a5044-5886-4ac1-91d4-5a7bf312502a">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7878b2b1-52a7-4de5-92cc-2e016584d280"/>
+				<reportElement x="444" y="0" width="100" height="30" uuid="bab95d86-0b0c-408f-9313-2763257ac4e3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b1d929bf-678f-4724-8bfc-cb10ad59054b"/>
 				</reportElement>
 				<text><![CDATA[joiningDate]]></text>
 			</staticText>
@@ -121,8 +121,8 @@
 				<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="444" y="0" width="111" height="30" uuid="e405bb0e-5d20-4780-8dac-d1ff9120bd92">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7878b2b1-52a7-4de5-92cc-2e016584d280"/>
+				<reportElement x="444" y="-2" width="100" height="30" uuid="c11a21c5-9d00-4f0d-af46-e1c71e93a555">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b1d929bf-678f-4724-8bfc-cb10ad59054b"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{joiningDate}]]></textFieldExpression>
 			</textField>
