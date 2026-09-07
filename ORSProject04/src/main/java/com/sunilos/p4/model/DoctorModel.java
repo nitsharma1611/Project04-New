@@ -3,7 +3,6 @@ package com.sunilos.p4.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import com.sunilos.p4.bean.BookBean;
 import com.sunilos.p4.bean.DoctorBean;
 import com.sunilos.p4.exception.ApplicationException;
 import com.sunilos.p4.exception.DuplicateRecordException;
@@ -90,7 +89,7 @@ public class DoctorModel extends BaseModel<DoctorBean> {
 			pstmt.setString(2, bean.getSpecialization());
 			pstmt.setInt(3, bean.getExperience());
 			pstmt.setString(4, bean.getContactNo());
-		pstmt.setString(5, bean.getCreatedBy());
+		    pstmt.setString(5, bean.getCreatedBy());
 			pstmt.setString(6, bean.getModifiedBy());
 			pstmt.setTimestamp(7, bean.getCreatedDatetime());
 			pstmt.setTimestamp(8, bean.getModifiedDatetime());

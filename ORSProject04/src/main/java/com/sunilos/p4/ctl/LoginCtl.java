@@ -119,7 +119,8 @@ public class LoginCtl extends BaseCtl<UserBean, UserModel> {
 
 		UserModel model = getModel();
 		UserBean bean = model.authenticate(login, password);
-
+System.out.println("Bean "+ bean);
+System.out.println("Login :"+login + " Password: "+password);
 		// if user is not found
 		if (bean == null) {
 			bean = populateBean(request);

@@ -89,7 +89,8 @@ public String LIBRARY_VIEW = PAGE_FOLDER + "/LibraryView.jsp";
 	public String SERVICE_LIST_VIEW = PAGE_FOLDER + "/ServiceListView.jsp";
 	public String EMPLOYEE_VIEW = PAGE_FOLDER + "/EmployeeView.jsp";
 	public String EMPLOYEE_LIST_VIEW = PAGE_FOLDER + "/EmployeeListView.jsp";
-	
+	public String EVENT_VIEW = PAGE_FOLDER + "/EventView.jsp";
+	public String EVENT_LIST_VIEW = PAGE_FOLDER + "/EventListView.jsp";
 
 	
 	
@@ -168,7 +169,8 @@ public String LIBRARY_VIEW = PAGE_FOLDER + "/LibraryView.jsp";
 	public String SERVICE_LIST_CTL = APP_CONTEXT + "/ctl/ServiceListCtl";
 	public String EMPLOYEE_CTL = APP_CONTEXT + "/ctl/EmployeeCtl";
 	public String EMPLOYEE_LIST_CTL = APP_CONTEXT + "/ctl/EmployeeListCtl";
-	
+	public String EVENT_CTL = APP_CONTEXT + "/ctl/EventCtl";
+	public String EVENT_LIST_CTL = APP_CONTEXT + "/ctl/EventListCtl";
 	// ============================================================
 
 	public String SMART_PARKING_REPORT_CTL = APP_CONTEXT + "/ctl/SmartParkingReportCtl";
@@ -197,7 +199,7 @@ public String LIBRARY_VIEW = PAGE_FOLDER + "/LibraryView.jsp";
 	public String VENDOR_REPORT_CTL = APP_CONTEXT + "/ctl/VendorReportCtl";
 	public String SERVICE_REPORT_CTL = APP_CONTEXT + "/ctl/ServiceReportCtl";
 	public String EMPLOYEE_REPORT_CTL = APP_CONTEXT + "/ctl/EmployeeReportCtl";
-	
+	public String EVENT_REPORT_CTL = APP_CONTEXT + "/ctl/EventReportCtl";
 	
 	
 	
@@ -229,5 +231,5 @@ public String LIBRARY_VIEW = PAGE_FOLDER + "/LibraryView.jsp";
 	public String VENDOR_REPORT_VIEW = "/reports/VendorListReport.jrxml";
 	public String SERVICE_REPORT_VIEW = "/reports/ServiceListReport.jrxml";
 	public String EMPLOYEE_REPORT_VIEW = "/reports/EmployeeListReport.jrxml";
-	
+	public String EVENT_REPORT_VIEW = "/reports/EventListReport.jrxml";
 }

@@ -265,6 +265,7 @@ public class UserModel extends BaseModel<UserBean> {
 		UserBean bean = findByLogin(login);
 
 		if (bean != null && bean.getPassword().equals(password)) {
+
 			return bean;
 		} else {
 			return null;

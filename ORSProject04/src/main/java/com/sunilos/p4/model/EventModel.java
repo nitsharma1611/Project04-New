@@ -3,38 +3,35 @@ package com.sunilos.p4.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import com.sunilos.p4.bean.DoctorBean;
-import com.sunilos.p4.bean.ProductBean;
+import com.sunilos.p4.bean.EmployeeBean;
+import com.sunilos.p4.bean.EventBean;
 import com.sunilos.p4.exception.ApplicationException;
 import com.sunilos.p4.exception.DuplicateRecordException;
 import com.sunilos.p4.util.JDBCDataSource;
 
-public class ProductModel extends BaseModel<ProductBean> {
-
-	@Override
-	public long add(ProductBean bean) throws ApplicationException, DuplicateRecordException {
+public class EventModel extends BaseModel<EventBean> {
+	public long add(EventBean bean) throws ApplicationException, DuplicateRecordException {
 		log.debug("Model add Started");
 		Connection conn = null;
 		int pk = 0;
 
-		ProductBean existbean = findByProductName(bean.getProductName());
+		EventBean existBean = findByEventName(bean.getEventName());
 
-		if (existbean != null) {
-			throw new DuplicateRecordException("productName already exists");
+		if (existBean != null) {
+			throw new DuplicateRecordException("Event Name already exists");
 		}
 
 		try {
 			conn = JDBCDataSource.getConnection();
 			pk = nextPK();
 			// Get auto-generated next primary key
-			System.out.println(pk + " in ModelJDBC");
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn.prepareStatement("INSERT INTO " + getTable() + " VALUES(?,?,?,?,?,?,?,?,?)");
 			pstmt.setInt(1, pk);
-			pstmt.setString(2, bean.getProductName());
-			pstmt.setString(3, bean.getProductCategory());
-			pstmt.setDate(4, new java.sql.Date(bean.getOrderDate().getTime()));
-			pstmt.setInt(5, bean.getPrice());
+			pstmt.setString(2, bean.getEventName());
+			pstmt.setDate(3, new java.sql.Date(bean.getEventDate().getTime()));
+			pstmt.setString(4, bean.getVenue());
+			pstmt.setString(5, bean.getOrganizer());
 			pstmt.setString(6, bean.getCreatedBy());
 			pstmt.setString(7, bean.getModifiedBy());
 			pstmt.setTimestamp(8, bean.getCreatedDatetime());
@@ -50,25 +47,31 @@ public class ProductModel extends BaseModel<ProductBean> {
 				ex.printStackTrace();
 				throw new ApplicationException("Exception : add rollback exception " + ex.getMessage());
 			}
-			throw new ApplicationException("Exception : Exception in add User");
+			throw new ApplicationException("Exception : Exception in add Employee ");
 		} finally {
 			JDBCDataSource.closeConnection(conn);
 		}
 		log.debug("Model add End");
 		return pk;
+
+	}
+
+	public EventBean findByEventName(String eventName) {
+
+		return findByUniqueColumn("eventName", eventName);
 	}
 
 	@Override
-	public void update(ProductBean bean) throws ApplicationException, DuplicateRecordException {
+	public void update(EventBean bean) throws ApplicationException, DuplicateRecordException {
 		log.debug("Model update Started");
 		Connection conn = null;
 
-		ProductBean existBean = findByProductName(bean.getProductName());
+		EventBean existBean = findByEventName(bean.getEventName());
 
 		// Check if updated College already exist
-		if (existBean != null && existBean.getId() != bean.getId()) {
+		if (existBean != null && !(existBean.getId() == bean.getId())) {
 
-			throw new DuplicateRecordException("Product is already exist");
+			throw new DuplicateRecordException("EventName is already exist");
 		}
 
 		try {
@@ -77,12 +80,13 @@ public class ProductModel extends BaseModel<ProductBean> {
 
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn.prepareStatement("UPDATE " + getTable()
-					+ " SET productName=?,productCategory=?,orderDate=?,price=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
-			pstmt.setString(1, bean.getProductName());
-			pstmt.setString(2, bean.getProductCategory());
-			pstmt.setDate(3, new java.sql.Date(bean.getOrderDate().getTime()));
-			pstmt.setInt(5, bean.getPrice());
-		    pstmt.setString(5, bean.getCreatedBy());
+					+ " SET eventName=?,eventDate=?,venue=?,organizer=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
+			pstmt.setString(1, bean.getEventName());
+			pstmt.setDate(2, new java.sql.Date(bean.getEventDate().getTime()));
+			pstmt.setString(3, bean.getVenue());
+			pstmt.setString(4, bean.getOrganizer());
+
+			pstmt.setString(5, bean.getCreatedBy());
 			pstmt.setString(6, bean.getModifiedBy());
 			pstmt.setTimestamp(7, bean.getCreatedDatetime());
 			pstmt.setTimestamp(8, bean.getModifiedDatetime());
@@ -97,44 +101,51 @@ public class ProductModel extends BaseModel<ProductBean> {
 			} catch (Exception ex) {
 				throw new ApplicationException("Exception : Delete rollback exception " + ex.getMessage());
 			}
-			throw new ApplicationException("Exception in updating Product ");
+			throw new ApplicationException("Exception in updating Event ");
 		} finally {
 			JDBCDataSource.closeConnection(conn);
 		}
 		log.debug("Model update End");
-	
 
 	}
 
 	@Override
-	public String getWhereClause(ProductBean bean) {
-
+	public String getWhereClause(EventBean bean) {
 		StringBuffer sql = new StringBuffer();
 
 		if (bean != null) {
 			if (bean.getId() > 0) {
 				sql.append(" AND id = " + bean.getId());
 			}
-			if (bean.getProductName() != null && bean.getProductName().length() > 0) {
-				sql.append(" AND PRODUCT_NAME like '" + bean.getProductName() + "%'");
+			if (bean.getEventName() != null && bean.getEventName().length() > 0) {
+				sql.append(" AND eventName like '" + bean.getEventName() + "%'");
 			}
+			if (bean.getVenue() != null && bean.getVenue().length() > 0) {
+				sql.append(" AND venue like '" + bean.getVenue() + "%'");
+			}
+			if (bean.getOrganizer() != null && bean.getOrganizer().length() > 0) {
+				sql.append(" AND organizer like '" + bean.getOrganizer() + "%'");
+			}
+			if (bean.getEventDate() != null && bean.getEventDate().getDate() > 0) {
+
+				sql.append(" AND eventDate = " + bean.getEventDate());
+			}
+
 		}
-
+		System.out.println(sql.toString());
 		return sql.toString();
-	}
 
-	public ProductBean findByProductName(String productName) {
-		return findByUniqueColumn("PRODUCT_NAME", productName);
 	}
 
 	@Override
 	public String getTable() {
-		return "st_product";
+
+		return "st_event";
 	}
 
 	@Override
-	public ProductBean getBean() {
-		return new ProductBean();
+	public EventBean getBean() {
+		// TODO Auto-generated method stub
+		return new EventBean();
 	}
-
 }

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EventListReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="27b6f25e-b473-4c62-9a34-002e566a12c6">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyAdapter "/>
+	<queryString language="SQL">
+		<![CDATA[select id,eventName,eventDate,venue, organizer from st_event]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_event"/>
+	</field>
+	<field name="eventName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="eventName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_event"/>
+	</field>
+	<field name="eventDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="eventDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_event"/>
+	</field>
+	<field name="venue" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="venue"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_event"/>
+	</field>
+	<field name="organizer" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="organizer"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_event"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="eventName">
+		<groupExpression><![CDATA[$F{eventName}]]></groupExpression>
+	</group>
+	<group name="eventDate">
+		<groupExpression><![CDATA[$F{eventDate}]]></groupExpression>
+	</group>
+	<group name="venue">
+		<groupExpression><![CDATA[$F{venue}]]></groupExpression>
+	</group>
+	<group name="organizer">
+		<groupExpression><![CDATA[$F{organizer}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="185" y="40" width="185" height="30" uuid="50b72682-3032-4894-8d8b-cea5e32ada3f"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Event List Reoprt]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="30" uuid="f6e16389-0f80-4427-8928-bbd89ebe1327">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8ab8d40-37f5-4877-bc75-0b05a40b01e8"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="142" height="30" uuid="70377f5d-c62c-4dcf-a3eb-b1fa6ea14a9c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="26eb0b92-e187-4e19-bd62-546f55d64309"/>
+				</reportElement>
+				<text><![CDATA[eventName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="f7f1033a-1613-4272-a6b2-32c076acb2d5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="18f3016d-72e0-4048-b908-ae5235fb91d6"/>
+				</reportElement>
+				<text><![CDATA[eventDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="318aa99a-e4fe-45ea-b949-4ddcf1032564">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fbdfacdc-b76c-4e2a-9739-6575dd175bd1"/>
+				</reportElement>
+				<text><![CDATA[venue]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="dac0b91d-7e25-4dd7-badb-e93cf10f640e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="16289f63-570a-46d1-97a2-9b927c7c1a25"/>
+				</reportElement>
+				<text><![CDATA[organizer]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="0" width="80" height="30" uuid="b34b87f2-e279-4f13-95fc-d41ce5d1aedc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8ab8d40-37f5-4877-bc75-0b05a40b01e8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="142" height="30" uuid="17e5f33f-aec4-4bbd-8b1a-fcb0ecaee7fe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="26eb0b92-e187-4e19-bd62-546f55d64309"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{eventName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="d4e31b50-9f3c-43e2-85ac-71008e743bf5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="18f3016d-72e0-4048-b908-ae5235fb91d6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{eventDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="cfcc1445-1b94-4162-93f0-4e688116c8de">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fbdfacdc-b76c-4e2a-9739-6575dd175bd1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{venue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="f2c4be8c-e25c-40fd-ac68-15b403ad48d7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="16289f63-570a-46d1-97a2-9b927c7c1a25"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{organizer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
