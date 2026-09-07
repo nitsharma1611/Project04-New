@@ -207,7 +207,7 @@ public class UserModel extends BaseModel<UserBean> {
 			conn.setAutoCommit(false); // Begin transaction
 
 			PreparedStatement pstmt = conn.prepareStatement(
-					"UPDATE "+ getTable() +" SET first_name=?,last_name=?,login=?,password=?,dob=?,mobileNo=?,roleId=?,unsuccessfulLogin=?,gender=?,lastLogin=?,userLock=?,registeredIp=?,lastLoginIp=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? WHERE id=?");
+					"UPDATE "+ getTable() +" SET firstName=?,lastName=?,login=?,password=?,dob=?,mobileNo=?,roleId=?,unsuccessfulLogin=?,gender=?,lastLogin=?,userLock=?,registeredIp=?,lastLoginIp=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? WHERE id=?");
 
 			pstmt.setString(1, bean.getFirstName());
 			pstmt.setString(2, bean.getLastName());
