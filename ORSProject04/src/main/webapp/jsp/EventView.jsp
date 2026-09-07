@@ -66,72 +66,63 @@ String _err = ServletUtility.getErrorMessage(request);
 					value="<%=DataUtility.getTimestamp(bean.getModifiedDatetime())%>">
 
 
-				
-
-				<div class="mb-3">
-					<label class="form-label fw-semibold"> Event Name <span
-						class="text-danger">*</span>
-					</label> <input type="text" name="eventName" class="form-control"
-						value="<%=DataUtility.getStringData(bean.getEventName())%>">
-
-					<div class="text-danger small mt-1">
-						<%=ServletUtility.getErrorMessage("eventName", request)%>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-
-    <label class="form-label fw-semibold">
-        EventDate
-        <span class="text-danger">*</span>
-    </label>
-
-    <div class="input-group">
-
-        <input type="text"
-               name="eventDate"
-               id="eventDate"
-               class="form-control"
-               placeholder="Select joiningDate"
-               readonly
-               value="<%=DataUtility.getDateString(bean.getEventDate())%>">
-
-        <button type="button"
-                class="btn btn-outline-secondary"
-                onclick="showCommonDatePicker('eventDate')">
-
-            <img src="../img/cal.jpg"
-                 width="16"
-                 height="15"
-                 alt="Calendar">
-
-        </button>
-
-    </div>
-
-    <div class="text-danger small mt-1">
-
-        <%=ServletUtility.getErrorMessage("eventDate", request)%>
-
-    </div>
-
-</div>
-			
-
-				<div class="mb-3">
-					<label class="form-label fw-semibold"> Venue <span
-						class="text-danger">*</span>
-					</label> <input type="text" name="venue" class="form-control"
-						value="<%=DataUtility.getStringData(bean.getVenue())%>">
-
-					<div class="text-danger small mt-1">
-						<%=ServletUtility.getErrorMessage("venue", request)%>
-					</div>
-				</div>
-
-
-				<!-- Slot Number -->
 				<div class="row g-3 mb-3">
+					<div class="col-md-6">
+
+						<label class="form-label fw-semibold"> Event Name <span
+							class="text-danger">*</span>
+						</label> <input type="text" name="eventName" class="form-control"
+							value="<%=DataUtility.getStringData(bean.getEventName())%>">
+
+						<div class="text-danger small mt-1">
+							<%=ServletUtility.getErrorMessage("eventName", request)%>
+						</div>
+					</div>
+
+
+					<div class="col-md-6">
+						<label class="form-label fw-semibold"> EventDate <span
+							class="text-danger">*</span>
+						</label>
+
+						<div class="input-group">
+
+							<input type="text" name="eventDate" id="eventDate"
+								class="form-control" placeholder="Select joiningDate" readonly
+								value="<%=DataUtility.getDateString(bean.getEventDate())%>">
+
+							<button type="button" class="btn btn-outline-secondary"
+								onclick="showCommonDatePicker('eventDate')">
+
+								<img src="../img/cal.jpg" width="16" height="15" alt="Calendar">
+
+							</button>
+
+						</div>
+
+						<div class="text-danger small mt-1">
+
+							<%=ServletUtility.getErrorMessage("eventDate", request)%>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="row g-3 mb-3">
+					<div class="col-md-6">
+
+						<label class="form-label fw-semibold"> Venue <span
+							class="text-danger">*</span>
+						</label> <input type="text" name="venue" class="form-control"
+							value="<%=DataUtility.getStringData(bean.getVenue())%>">
+
+						<div class="text-danger small mt-1">
+							<%=ServletUtility.getErrorMessage("venue", request)%>
+						</div>
+					</div>
+
+
+					<!-- Slot Number -->
 					<div class="col-md-6">
 						<label class="form-label fw-semibold"> Organizer <span
 							class="text-danger">*</span>
@@ -143,7 +134,7 @@ String _err = ServletUtility.getErrorMessage(request);
 						</div>
 					</div>
 
-			<!-- Status -->
+
 
 				</div>
 
