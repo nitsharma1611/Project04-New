@@ -461,7 +461,7 @@ public class UserModel extends BaseModel<UserBean> {
 	 * @throws ApplicationException
 	 * @throws DuplicateRecordException
 	 */
-	public long registerUser(UserBean bean)
+	public long registerUser(UserBean bean, String imagePath)
 			throws ApplicationException, DuplicateRecordException {
 
 		log.debug("Model add Started");
@@ -492,8 +492,7 @@ public class UserModel extends BaseModel<UserBean> {
 			// =====================================================
 			// ATTACHMENT - SIRF REGISTRATION MAIL KE LIYE
 			// =====================================================
-			msg.setAttachment(
-					"C:\\iamges\\java.png");
+			msg.setAttachment(imagePath);
 
 			EmailUtility.sendMail(msg);
 

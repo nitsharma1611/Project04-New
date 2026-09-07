@@ -145,7 +145,9 @@ public class UserRegistrationCtl extends BaseCtl<UserBean, UserModel> {
 		UserModel model = getModel();
 		try {
 //			long pk =model.add(bean);)
-			long pk = model.registerUser(bean);
+			
+			String imagePath = getServletContext().getRealPath("/img/java.png");
+			long pk = model.registerUser(bean, imagePath);
 			bean.setId(pk);
 			ServletUtility.setSuccessMessage("User is registred, Login now", request);
 		} catch (DuplicateRecordException e) {
