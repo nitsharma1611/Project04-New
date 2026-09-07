@@ -63,7 +63,7 @@ public class UserModel extends BaseModel<UserBean> {
 			conn.setAutoCommit(false); // Begin transaction
 
 			PreparedStatement pstmt = conn
-					.prepareStatement("INSERT INTO ST_USER VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+					.prepareStatement("INSERT INTO "+ getTable() +" VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 			pstmt.setInt(1, pk);
 			pstmt.setString(2, bean.getFirstName());
@@ -147,7 +147,7 @@ public class UserModel extends BaseModel<UserBean> {
 			conn.setAutoCommit(false); // Begin transaction
 
 			PreparedStatement pstmt = conn
-					.prepareStatement("UPDATE ST_USER SET PHOTO=? WHERE ID=?");
+					.prepareStatement("UPDATE "+ getTable() + " SET PHOTO=? WHERE ID=?");
 
 			pstmt.setString(1, photo);
 			pstmt.setLong(2, id);
@@ -207,7 +207,7 @@ public class UserModel extends BaseModel<UserBean> {
 			conn.setAutoCommit(false); // Begin transaction
 
 			PreparedStatement pstmt = conn.prepareStatement(
-					"UPDATE ST_USER SET FIRST_NAME=?,LAST_NAME=?,LOGIN=?,PASSWORD=?,DOB=?,MOBILE_NO=?,ROLE_ID=?,UNSUCCESSFUL_LOGIN=?,GENDER=?,LAST_LOGIN=?,USER_LOCK=?,REGISTERED_IP=?,LAST_LOGIN_IP=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
+					"UPDATE "+ getTable() +" SET first_name=?,last_name=?,login=?,password=?,dob=?,mobileNo=?,roleId=?,unsuccessfulLogin=?,gender=?,lastLogin=?,userLock=?,registeredIp=?,lastLoginIp=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? WHERE id=?");
 
 			pstmt.setString(1, bean.getFirstName());
 			pstmt.setString(2, bean.getLastName());
@@ -319,7 +319,7 @@ public class UserModel extends BaseModel<UserBean> {
 		log.debug("Model get roles Started");
 
 		StringBuffer sql = new StringBuffer(
-				"SELECT * FROM ST_USER WHERE role_Id=?");
+				"SELECT * FROM "+ getTable() +" WHERE role_Id=?");
 
 		Connection conn = null;
 

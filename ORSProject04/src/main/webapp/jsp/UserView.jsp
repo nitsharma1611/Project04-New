@@ -103,15 +103,23 @@ genderMap.put("F", "Female");
 					</div>
 				</div>
 
-				<div class="mb-3">
-					<label class="form-label fw-semibold">Login ID <span
-						class="text-danger">*</span></label> <input type="text" name="login"
-						class="form-control"
-						value="<%=DataUtility.getStringData(bean.getLogin())%>"
-						<%=(bean.getId() > 0) ? "readonly" : ""%>>
-					<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("login", request)%></div>
+				<div class="row g-3 mb-3">
+					<div class="col-md-6">
+						<label class="form-label fw-semibold">Login ID <span
+							class="text-danger">*</span></label> <input type="text" name="login"
+							class="form-control"
+							value="<%=DataUtility.getStringData(bean.getLogin())%>"
+							<%=(bean.getId() > 0) ? "readonly" : ""%>>
+						<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("login", request)%></div>
+					</div>
+					<div class="col-md-6">
+						<label class="form-label fw-semibold">Mobile No <span
+							class="text-danger">*</span></label> <input type="text" name="mobileNo"
+							class="form-control" placeholder="enter MobileNo"
+							value="<%=DataUtility.getStringData(bean.getMobileNo())%>">
+						<div class="text-danger small mt-1"><%=ServletUtility.getErrorMessage("mobileNo", request)%></div>
+					</div>
 				</div>
-
 				<div class="row g-3 mb-3">
 					<div class="col-md-6">
 						<label class="form-label fw-semibold">Password <span
@@ -139,8 +147,7 @@ genderMap.put("F", "Female");
 						<%=HTMLUtility.getList("roleId", String.valueOf(bean.getRoleId()), roleList)%>
 					</div>
 				</div>
-<div
-				 class="mb-4">
+				<div class="mb-4">
 					<label class="form-label fw-semibold"> Date of Birth
 						(mm/dd/yyyy) </label>
 

@@ -43,7 +43,17 @@ public class UserRegistrationCtl extends BaseCtl<UserBean, UserModel> {
 
 		String login = request.getParameter("login");
 		String dob = request.getParameter("dob");
-
+		String mobileNo = request.getParameter("mobileNo");
+		if (DataValidator.isNull(mobileNo)) {
+			request.setAttribute("mobileNo", PropertyReader.getValue("error.require", "Mobile No"));
+			pass = false;
+		} else if (!DataValidator.isValidMobile(mobileNo)) {
+			request.setAttribute("mobileNo", PropertyReader.getValue("error.mobile", "Mobile No "));
+			pass = false;
+		}
+		
+		
+		
 		if (DataValidator.isNull(request.getParameter("firstName"))) {
 			request.setAttribute("firstName", PropertyReader.getValue("error.require", "First Name"));
 			pass = false;
@@ -103,7 +113,7 @@ public class UserRegistrationCtl extends BaseCtl<UserBean, UserModel> {
 		bean.setFirstName(DataUtility.getString(request.getParameter("firstName")));
 
 		bean.setLastName(DataUtility.getString(request.getParameter("lastName")));
-
+		bean.setMobileNo(DataUtility.getString(request.getParameter("mobileNo")));
 		bean.setLogin(DataUtility.getString(request.getParameter("login")));
 
 		bean.setPassword(DataUtility.getString(request.getParameter("password")));

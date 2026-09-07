@@ -30,7 +30,18 @@ public class DataValidator {
 	public static boolean isNotNull(String val) {
 		return !isNull(val);
 	}
+	/**
+	 * Checks the  value is valid Mobile Number format 
+	 */
+	public static boolean isValidMobile(String mobileNo) {
+	    if (mobileNo == null) {
+	        return false;
+	    }
 
+	    return mobileNo.matches("^[6-9][0-9]{9}$");
+	}
+	
+	
 	/**
 	 * Checks if value is an Integer
 	 */
