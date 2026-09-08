@@ -48,6 +48,7 @@ public class HTMLUtility {
 			}
 		}
 		sb.append("</select>");
+		System.out.println(sb.toString());
 		return sb.toString();
 	}
 

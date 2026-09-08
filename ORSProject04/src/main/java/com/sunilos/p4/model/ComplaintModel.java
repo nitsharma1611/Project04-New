@@ -69,9 +69,8 @@ public class ComplaintModel extends BaseModel<ComplaintBean> {
 
 		ComplaintBean existBean = findByComplaintType(bean.getComplaintType());
 
-		// Check if updated College already exist
+		// Check if updated ComplaintType  already exist
 		if (existBean != null && !(existBean.getId() == bean.getId())) {
-
 			throw new DuplicateRecordException("Complaint Type is already exist");
 		}
 

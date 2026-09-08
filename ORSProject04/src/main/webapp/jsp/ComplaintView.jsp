@@ -16,9 +16,9 @@ String _suc = ServletUtility.getSuccessMessage(request);
 String _err = ServletUtility.getErrorMessage(request);
 
 HashMap statusMap = new HashMap();
-statusMap.put("Approved", "Approved");
+statusMap.put("In Progress", "In Progress");
 statusMap.put("Pending", "Pending");
-statusMap.put("Rejected", "Rejected");
+statusMap.put("Resolved", "Resolved");
 %>
 
 <div class="container py-4" style="max-width:650px;">
