@@ -1,4 +1,4 @@
-<%@page import="com.sunilos.p4.bean.AIRecommendationBean"%>
+<%@page import="com.sunilos.p4.bean.ComplaintBean"%>
 
 <%@page import="com.sunilos.p4.ctl.BaseCtl"%>
 <%@page import="com.sunilos.p4.ctl.ORSView"%>
@@ -13,7 +13,7 @@ int pageSize = ServletUtility.getPageSize(request);
 int index = ((pageNo - 1) * pageSize) + 1;
 
 List list = ServletUtility.getList(request);
-Iterator<AIRecommendationBean> it = list.iterator();
+Iterator<ComplaintBean> it = list.iterator();
 
 String _err = ServletUtility.getErrorMessage(request);
 String _suc = ServletUtility.getSuccessMessage(request);
@@ -28,27 +28,27 @@ String _suc = ServletUtility.getSuccessMessage(request);
 			style="background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%);">
 
 			<h5 class="mb-0 fw-bold">
-				<i class="bi bi-p-square-fill me-2"></i>AIRecommendation List
+				<i class="bi bi-p-square-fill me-2"></i>Complaint List
 			</h5>
 
 			<div class="d-flex gap-2">
 
-				<a href="<%=ORSView.AI_RECOMMENDATION_REPORT_CTL%>" target="_blank"
+				<a href="<%=ORSView.COMPLAINT_REPORT_CTL%>" target="_blank"
 					class="btn btn-warning btn-sm fw-semibold"> <i
 					class="bi bi-file-earmark-pdf"></i> Print PDF
-				</a> <a href="<%=ORSView.AI_RECOMMENDATION_REPORT_CTL%>?type=doc"
+				</a> <a href="<%=ORSView.COMPLAINT_REPORT_CTL%>?type=doc"
 					target="_blank" class="btn btn-info btn-sm fw-semibold"> <i
 					class="bi bi-file-earmark-word"></i> Print DOC
-				</a> <a href="<%=ORSView.AI_RECOMMENDATION_CTL%>"
+				</a> <a href="<%=ORSView.COMPLAINT_CTL%>"
 					class="btn btn-light btn-sm text-primary fw-semibold"> <i
-					class="bi bi-plus-circle"></i> Add AI Recommendation
+					class="bi bi-plus-circle"></i> Add Complaint
 				</a>
 
 			</div>
 
 		</div>
 
-		<form action="<%=ORSView.AI_RECOMMENDATION_LIST_CTL%>" method="post">
+		<form action="<%=ORSView.COMPLAINT_LIST_CTL%>" method="post">
 
 			<input type="hidden" name="pageNo" value="<%=pageNo%>"> <input
 				type="hidden" name="pageSize" value="<%=pageSize%>">
@@ -57,29 +57,23 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 			<div class="p-3 bg-light border-bottom d-flex flex-wrap gap-2">
 
-				<input type="text" name="recommendationCode"
+				<input type="text" name="complaintType"
 					class="form-control form-control-sm" style="max-width: 220px"
-					placeholder="Search recommendationCode"
-					value="<%=ServletUtility.getParameter("recommendationCode", request)%>">
+					placeholder="Search complaintType"
+					value="<%=ServletUtility.getParameter("complaintType", request)%>">
 
-				<input type="text" name="userName"
+				<input type="text" name="complaintDate"
 					class="form-control form-control-sm" style="max-width: 220px"
-					placeholder="userName"
-					value="<%=ServletUtility.getParameter("userName", request)%>">
+					placeholder="complaintDate"
+					value="<%=ServletUtility.getParameter("complaintDate", request)%>">
 
 
-				
-					<input type="text" name="status"
-
-					class="form-control form-control-sm" style="max-width: 220px"
-					placeholder="status"
-					value="<%=ServletUtility.getParameter("status", request)%>">
 
 
-			
 
-<button type="submit" name="operation"
 
+
+				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 
 					<i class="bi bi-search"></i> Search
@@ -96,7 +90,9 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 			</div>
 
-			<%if (_err != null && !_err.isEmpty()) {%>
+			<%
+			if (_err != null && !_err.isEmpty()) {
+			%>
 
 			<div class="alert alert-danger m-3">
 
@@ -105,9 +101,13 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 			</div>
 
-			<%}%>
+			<%
+			}
+			%>
 
-			<%if (_suc != null && !_suc.isEmpty()) {%>
+			<%
+			if (_suc != null && !_suc.isEmpty()) {
+			%>
 
 			<div class="alert alert-success m-3">
 
@@ -116,7 +116,9 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 			</div>
 
-			<%}%>
+			<%
+			}
+			%>
 
 			<div class="table-responsive">
 
@@ -131,9 +133,9 @@ String _suc = ServletUtility.getSuccessMessage(request);
 							</th>
 
 							<th>#</th>
-							<th>Recommendation Code</th>
-							<th>User Name</th>
-							<th>Recommendation Type</th>
+							<th>Complaint Type</th>
+							<th>Description</th>
+							<th>Complaint Date</th>
 
 							<th>Status</th>
 							<th>Action</th>
@@ -144,8 +146,10 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 					<tbody>
 
-						<%while (it.hasNext()) {
-	AIRecommendationBean bean = it.next();%>
+						<%
+						while (it.hasNext()) {
+							ComplaintBean bean = it.next();
+						%>
 
 						<tr>
 
@@ -154,16 +158,16 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 							<td><%=index++%></td>
 
-							<td><%=bean.getRecommendationCode()%></td>
+							<td><%=bean.getComplaintType()%></td>
 
-							<td><%=bean.getUserName()%></td>
+							<td><%=bean.getDescription()%></td>
 
-							<td><%=bean.getRecommendationType()%></td>
+							<td><%=bean.getComplaintDate()%></td>
 
 							<td><span class="badge bg-success"> <%=bean.getStatus()%>
 							</span></td>
 
-							<td><a href="AIRecommendationCtl?id=<%=bean.getId()%>"
+							<td><a href="ComplaintCtl?id=<%=bean.getId()%>"
 								class="btn btn-outline-primary btn-sm"> <i
 									class="bi bi-pencil"></i> Edit
 
@@ -171,7 +175,9 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 						</tr>
 
-						<%}%>
+						<%
+						}
+						%>
 
 					</tbody>
 

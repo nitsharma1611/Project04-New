@@ -18,11 +18,11 @@ public class ComplaintModelTest {
 		// testAdd();
 		// testUpdate();
 		// testDelete();
-		// testFindByPK();
-		// testFindByComplaintType();
-		// testFindByUniqueColumn();
+		 //testFindByPK();
+		 //testFindByComplaintType();
+		 //testFindByUniqueColumn();
 		// testSearch();
-		// testSearchPage();
+		 //testSearchPage();
 		// testList();
 		testListPage();
 
@@ -60,7 +60,7 @@ public class ComplaintModelTest {
 
 		ComplaintBean bean = new ComplaintBean();
 
-		bean.setId(1);
+		bean.setId(26);
 		bean.setComplaintType("Electricity Complaint Updated");
 		bean.setDescription("Power supply issue updated");
 		bean.setComplaintDate(new Date());
@@ -80,7 +80,7 @@ public class ComplaintModelTest {
 
 	public static void testDelete() throws Exception {
 
-		model.delete(1);
+		model.delete(26);
 
 		System.out.println("Record Deleted");
 	}
@@ -106,7 +106,7 @@ public class ComplaintModelTest {
 	public static void testFindByComplaintType() throws Exception {
 
 		ComplaintBean bean =
-				model.findByComplaintType("Electricity Complaint");
+				model.findByComplaintType("Power Failure");
 
 		if (bean != null) {
 
@@ -127,7 +127,7 @@ public class ComplaintModelTest {
 		ComplaintBean bean =
 				model.findByUniqueColumn(
 						"complaintType",
-						"Electricity Complaint");
+						"Power Failure");
 
 		if (bean != null) {
 
@@ -147,7 +147,7 @@ public class ComplaintModelTest {
 
 		ComplaintBean bean = new ComplaintBean();
 
-		bean.setComplaintType("Electricity");
+		bean.setComplaintType("Power Failure");
 
 		List<ComplaintBean> list = model.search(bean);
 
@@ -170,7 +170,7 @@ public class ComplaintModelTest {
 
 		ComplaintBean bean = new ComplaintBean();
 
-		bean.setComplaintType("Electricity");
+		bean.setComplaintType("Power Failure");
 
 		List<ComplaintBean> list =
 				model.search(bean, 1, 5);

@@ -461,7 +461,11 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Event
 								List
 						</a></li>
-
+<li><a class="dropdown-item"
+							href="<%=ORSView.COMPLAINT_LIST_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i> Complaint
+								List
+						</a></li>
 
 
 
