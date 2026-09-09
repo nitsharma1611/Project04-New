@@ -138,7 +138,24 @@ public class UploadPhotoCtl extends HttpServlet {
 		}
 
 		System.out.println("part ==== : " + part.getName());
+		long maxFileSize = 2 * 1024 * 1024; // 5 MB
 
+		if (part.getSize() > maxFileSize) {
+		    ServletUtility.setErrorMessage("Photo size must be less than 2 MB", request);
+		    ServletUtility.forwardPage(getView(), request, response);
+		    return;
+		}
+		String contentType = part.getContentType();
+
+		if (contentType == null || !contentType.startsWith("image/")) {
+		    ServletUtility.setErrorMessage(
+		        "Only image files are allowed", request);
+		    ServletUtility.forwardPage(getView(), request, response);
+		    return;
+		}
+		
+		
+		
 		// Original file name
 		String fileName = part.getSubmittedFileName(); // get original file name
 
