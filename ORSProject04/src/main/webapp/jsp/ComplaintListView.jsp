@@ -62,17 +62,6 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					placeholder="Search complaintType"
 					value="<%=ServletUtility.getParameter("complaintType", request)%>">
 
-				<input type="test" name="complaintDate"
-					class="form-control form-control-sm" style="max-width: 220px"
-					placeholder="complaintDate"
-					value="<%=ServletUtility.getParameter("complaintDate", request)%>">
-
-
-
-
-
-
-
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
 

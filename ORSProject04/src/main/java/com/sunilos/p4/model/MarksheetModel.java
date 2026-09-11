@@ -175,7 +175,7 @@ public class MarksheetModel extends BaseModel<MarksheetBean> {
 		log.debug("Model  MeritList Started");
 		ArrayList list = new ArrayList();
 		StringBuffer sql = new StringBuffer(
-				"SELECT `ID`,`ROLL_NO`, `NAME`, `PHYSICS`, `CHEMISTRY`, `MATHS` , (PHYSICS + CHEMISTRY + MATHS) as total from `ST_MARKSHEET` order by total desc");
+				"SELECT `ID`,`ROLLNO`, `NAME`, `PHYSICS`, `CHEMISTRY`, `MATHS` , (PHYSICS + CHEMISTRY + MATHS) as total from `ST_MARKSHEET` order by total desc");
 		// if page size is greater than zero then apply pagination
 		if (pageSize > 0) {
 			// Calculate start record index
